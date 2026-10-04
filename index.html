@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#173b30" />
+  <meta name="description" content="Build a more confident financial future with Armi L. Lavy. Explore beginner-friendly investing education, financial tools, and market insights." />
+  <title>Armi L. Lavy | Personal Finance & Investing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Armi Lavy home">
+      <span class="brand-mark">AL</span>
+      <span class="brand-name">ARMI L. LAVY</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.5" width="25" height="25">
+        <path d="M3 8h18M3 16h18"/>
+      </svg>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">About</a>
+      <a href="#resources">Resources</a>
+      <a href="#calculator">Tools</a>
+      <a href="#insights">Insights</a>
+      <a class="nav-cta" href="#resources">Explore the Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- FULL SCREEN HERO -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide is-active"
+          style="background-image:url('https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=2200&q=85')"></div>
+        <div class="hero-slide"
+          style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=85')"></div>
+        <div class="hero-slide"
+          style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=85')"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow light-eyebrow">
+          PERSONAL FINANCE · INVESTING EDUCATION
+        </span>
+
+        <h1>A more confident<br />relationship with money.</h1>
+
+        <p>
+          Practical financial education for beginners ready to understand
+          investing, make informed decisions, and build lasting habits.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-light" href="#resources">
+            Explore the Resources
+          </a>
+          <a class="text-link light-link" href="#about">
+            Get to know Armi
+          </a>
+        </div>
+
+        <div class="hero-bottom">
+          <span class="hero-caption" id="heroCaption">
+            A thoughtful approach to investing
+          </span>
+          <div class="slide-indicators" id="slideIndicators"
+            aria-label="Choose hero image">
+            <button class="slide-dot is-active" data-slide="0"
+              aria-label="Show slide 1" aria-pressed="true"></button>
+            <button class="slide-dot" data-slide="1"
+              aria-label="Show slide 2" aria-pressed="false"></button>
+            <button class="slide-dot" data-slide="2"
+              aria-label="Show slide 3" aria-pressed="false"></button>
+          </div>
+          <span class="slide-count" id="slideCount">01 / 03</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND INTRODUCTION -->
+    <section class="intro section-pad" id="about">
+      <div class="section-kicker">THE PHILOSOPHY</div>
+      <div class="intro-grid">
+        <h2>Financial clarity<br />starts with <em>understanding.</em></h2>
+        <div class="intro-copy">
+          <p>
+            Building wealth does not have to begin with complicated
+            strategies or overwhelming financial jargon.
+          </p>
+          <p>
+            Armi L. Lavy creates approachable educational resources that
+            help beginners understand the fundamentals, evaluate their
+            options, and take their next steps with greater confidence.
+          </p>
+          <a href="#resources" class="text-link dark-link">
+            Discover the learning resources
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE VALUE POINTS -->
+    <section class="principles">
+      <article class="principle">
+        <div class="line-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="1.4">
+            <path d="M8 10h32v28H8zM15 18h18M15 24h18M15 30h11"/>
+          </svg>
+        </div>
+        <h3>Understand the basics</h3>
+        <p>Learn essential financial concepts in clear, approachable language.</p>
+      </article>
+
+      <article class="principle">
+        <div class="line-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="1.4">
+            <circle cx="24" cy="24" r="16"/>
+            <path d="M24 13v11l8 5"/>
+          </svg>
+        </div>
+        <h3>Build steady habits</h3>
+        <p>Use simple frameworks to approach your financial goals consistently.</p>
+      </article>
+
+      <article class="principle">
+        <div class="line-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor"
+            stroke-width="1.4">
+            <path d="M9 37V11M9 37h31"/>
+            <path d="m14 31 8-9 7 4 11-14"/>
+            <circle cx="40" cy="12" r="2"/>
+          </svg>
+        </div>
+        <h3>Make informed choices</h3>
+        <p>Understand risk, evaluate investments, and decide at your own pace.</p>
+      </article>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="resources section-pad" id="resources">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">THE RESOURCE LIBRARY</div>
+          <h2>Knowledge worth investing in.</h2>
+          <p class="section-description">
+            Thoughtfully created resources for your financial learning journey.
+          </p>
+        </div>
+        <span class="collection-label">DIGITAL EDUCATION</span>
+      </div>
+
+      <div class="featured-product" id="featuredProduct">
+        <!-- Rendered from config.js -->
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Additional products rendered from config.js -->
+      </div>
+    </section>
+
+    <!-- DIVIDEND CALCULATOR -->
+    <section class="calculator-section section-pad" id="calculator">
+      <div class="calculator-intro">
+        <div class="section-kicker">FREE FINANCIAL TOOL</div>
+        <h2>See what your dividends could look like.</h2>
+        <p>
+          Explore an illustrative dividend-income estimate using your
+          investment amount, contribution plan, and assumed annual yield.
+        </p>
+        <div class="calculator-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" width="22" height="22" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 11v5M12 7h.01"/>
+          </svg>
+          <span>
+            Estimates only. Actual dividends, share prices, and returns
+            may vary. This tool does not forecast or guarantee performance.
+          </span>
+        </div>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calculator-card-head">
+          <span>DIVIDEND INCOME ESTIMATOR</span>
+          <span class="status-dot"></span>
+        </div>
+
+        <form id="dividendForm">
+          <div class="field">
+            <label for="currency">Display currency</label>
+            <select id="currency">
+              <option value="USD">US Dollar (USD)</option>
+              <option value="PHP">Philippine Peso (PHP)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="initialInvestment">Initial investment</label>
+            <div class="input-with-prefix">
+              <span id="currencyPrefix">$</span>
+              <input id="initialInvestment" type="number"
+                min="0" max="100000000000" step="100"
+                value="5000" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="monthlyContribution">Monthly contribution</label>
+            <div class="input-with-prefix">
+              <span id="monthlyPrefix">$</span>
+              <input id="monthlyContribution" type="number"
+                min="0" max="1000000000" step="50"
+                value="200" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label-row">
+              <label for="dividendYield">Assumed annual dividend yield</label>
+              <span class="range-value" id="yieldValue">4.0%</span>
+            </div>
+            <input id="dividendYield" type="range"
+              min="0" max="15" step="0.25" value="4" />
+            <div class="range-labels">
+              <span>0%</span><span>15%</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="years">Investment period</label>
+            <select id="years">
+              <option value="1">1 year</option>
+              <option value="3">3 years</option>
+              <option value="5" selected>5 years</option>
+              <option value="10">10 years</option>
+              <option value="20">20 years</option>
+              <option value="30">30 years</option>
+            </select>
+          </div>
+
+          <div class="field checkbox-field">
+            <input id="reinvest" type="checkbox" checked />
+            <label for="reinvest">
+              Reinvest estimated dividends
+            </label>
+          </div>
+
+          <button class="button button-dark calculate-button"
+            type="submit">Calculate estimate</button>
+        </form>
+
+        <div class="results" id="calculatorResults" aria-live="polite">
+          <div class="results-label">ESTIMATED ANNUAL DIVIDENDS</div>
+          <div class="result-main" id="annualResult">$0</div>
+
+          <div class="result-divider"></div>
+
+          <div class="result-row">
+            <span>Estimated monthly average</span>
+            <strong id="monthlyResult">$0</strong>
+          </div>
+          <div class="result-row">
+            <span>Estimated portfolio value</span>
+            <strong id="portfolioResult">$0</strong>
+          </div>
+          <div class="result-row">
+            <span>Total contributions</span>
+            <strong id="contributionsResult">$0</strong>
+          </div>
+          <p class="result-disclaimer" id="resultDisclaimer">
+            Based on your selected assumptions. Not a prediction of actual returns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCIAL NEWS -->
+    <section class="insights section-pad" id="insights">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">MARKETS &amp; MONEY</div>
+          <h2>Stay informed.</h2>
+          <p class="section-description">
+            Financial news and reporting to help you stay curious and informed.
+          </p>
+        </div>
+        <a class="text-link dark-link"
+          href="https://news.google.com/search?q=personal+finance+investing&hl=en-US&gl=US&ceid=US:en"
+          target="_blank" rel="noopener noreferrer">Browse financial news</a>
+      </div>
+
+      <div class="news-status" id="newsStatus" aria-live="polite">
+        Loading recent financial headlines...
+      </div>
+      <div class="news-grid" id="newsGrid"></div>
+
+      <p class="news-attribution">
+        Headlines are provided by an external news feed. Articles remain the
+        property of their respective publishers. News coverage is informational
+        and does not constitute investment advice.
+      </p>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="closing-cta">
+      <div class="section-kicker light-eyebrow">YOUR NEXT CHAPTER</div>
+      <h2>Small steps.<br /><em>Greater understanding.</em></h2>
+      <p>
+        Start learning the fundamentals and build a financial approach
+        that makes sense for you.
+      </p>
+      <a href="#resources" class="button button-light">
+        Explore the Guide
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">AL</span>
+      <span class="brand-name">ARMI L. LAVY</span>
+    </a>
+
+    <p class="footer-disclaimer">
+      Educational content only. Not individualized financial, tax, or
+      investment advice. Investing involves risk, including loss of principal.
+    </p>
+
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Armi L. Lavy</span>
+      <div>
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+        <a href="#insights">Insights</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

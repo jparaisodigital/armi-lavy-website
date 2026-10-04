@@ -1,0 +1,1716 @@
+/* =========================================================
+   ARMI L. LAVY — PERSONAL FINANCE
+   Complete stylesheet
+   Premium editorial design · Responsive layout
+   ========================================================= */
+
+/* -------------------------
+   1. DESIGN TOKENS & RESET
+------------------------- */
+
+:root {
+  --green: #173b30;
+  --green-deep: #102a22;
+  --green-soft: #e9eee8;
+  --cream: #f8f6f0;
+  --paper: #fffefa;
+  --gold: #b79a61;
+  --ink: #222722;
+  --muted: #747970;
+  --line: #dedfd6;
+
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --page-pad: clamp(22px, 6vw, 96px);
+
+  --content-max: 1440px;
+  --section-space: clamp(72px, 8vw, 112px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  color: inherit;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* -------------------------
+   2. SITE HEADER & NAVIGATION
+------------------------- */
+
+.site-header {
+  height: 80px;
+  padding: 0 var(--page-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--paper);
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid var(--gold);
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 16px;
+}
+
+.brand-name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.main-nav > a {
+  font-size: 12px;
+  color: #41473f;
+  transition: color 0.2s ease;
+}
+
+.main-nav > a:hover {
+  color: var(--gold);
+}
+
+.main-nav .nav-cta {
+  background: var(--green);
+  color: white;
+  padding: 14px 19px;
+}
+
+.main-nav .nav-cta:hover {
+  background: var(--green-deep);
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  padding: 6px;
+  background: transparent;
+  color: var(--green);
+  cursor: pointer;
+}
+
+/* -------------------------
+   3. HERO SLIDER
+------------------------- */
+
+.hero {
+  position: relative;
+  height: calc(100svh - 80px);
+  min-height: 590px;
+  max-height: 1100px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--green-deep);
+  color: white;
+}
+
+.hero-slides,
+.hero-slide,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.035);
+  transition:
+    opacity 1.35s ease,
+    transform 7s ease;
+  will-change: opacity, transform;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 30, 23, 0.87) 0%,
+      rgba(11, 30, 23, 0.65) 43%,
+      rgba(11, 30, 23, 0.12) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      transparent 38%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding:
+    clamp(50px, 8vh, 100px)
+    var(--page-pad)
+    28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrow,
+.section-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.7;
+}
+
+.light-eyebrow {
+  color: #d7c39a;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 28px 0 20px;
+  font: 400 clamp(44px, 6.4vw, 88px) / 1.08 var(--serif);
+  letter-spacing: -0.045em;
+}
+
+.hero-content > p {
+  max-width: 475px;
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 27px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 49px;
+  padding: 14px 23px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-align: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button-light {
+  background: var(--cream);
+  color: var(--green);
+}
+
+.button-light:hover {
+  background: #e7ddc9;
+}
+
+.button-dark {
+  background: var(--green);
+  color: white;
+}
+
+.button-dark:hover {
+  background: var(--green-deep);
+}
+
+.text-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
+  transition: opacity 0.2s ease;
+}
+
+.text-link:hover {
+  opacity: 0.7;
+}
+
+.light-link {
+  color: white;
+}
+
+.dark-link {
+  color: var(--green);
+}
+
+.hero-bottom {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.hero-caption {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.slide-indicators {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.slide-dot {
+  width: 24px;
+  height: 3px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border: 0;
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.slide-dot.is-active {
+  width: 42px;
+  background: #d7c39a;
+}
+
+.slide-count {
+  justify-self: end;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+/* -------------------------
+   4. SHARED SECTION STYLES
+------------------------- */
+
+.section-pad {
+  padding: var(--section-space) var(--page-pad);
+}
+
+.section-kicker {
+  color: #8c7447;
+}
+
+.intro {
+  background: var(--cream);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 10%;
+  margin-top: 30px;
+  align-items: start;
+}
+
+.intro h2,
+.section-heading h2,
+.calculator-intro h2,
+.closing-cta h2 {
+  margin: 0;
+  font: 400 clamp(34px, 4.2vw, 55px) / 1.2 var(--serif);
+  letter-spacing: -0.035em;
+}
+
+.intro h2 em,
+.closing-cta h2 em {
+  color: #8d774e;
+  font-weight: 400;
+}
+
+.intro-copy p,
+.section-description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.intro-copy p:first-child {
+  margin-top: 0;
+}
+
+.intro-copy .text-link {
+  margin-top: 16px;
+}
+
+/* -------------------------
+   5. PRINCIPLES
+------------------------- */
+
+.principles {
+  padding: 55px var(--page-pad);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+
+.principle {
+  padding: 10px clamp(12px, 3vw, 38px);
+}
+
+.principle + .principle {
+  border-left: 1px solid var(--line);
+}
+
+.line-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--gold);
+}
+
+.line-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.principle h3 {
+  margin: 20px 0 9px;
+  font: 500 19px var(--serif);
+}
+
+.principle p {
+  max-width: 280px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* -------------------------
+   6. RESOURCES & PRODUCTS
+------------------------- */
+
+.resources {
+  background: var(--paper);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  margin-top: 14px;
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.section-description {
+  margin-bottom: 0;
+}
+
+.collection-label {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.featured-product {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.product-image-wrap {
+  min-height: 410px;
+  position: relative;
+  overflow: hidden;
+  background: #e6e4d9;
+}
+
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 410px;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.product-image-wrap:hover img {
+  transform: scale(1.025);
+}
+
+.product-image-wrap .product-cover {
+  object-fit: contain;
+  padding: 35px;
+  background: #e8e5da;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(28px, 5vw, 65px);
+}
+
+.product-eyebrow {
+  color: #8d774e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.product-info h3 {
+  margin: 18px 0 14px;
+  font: 400 clamp(29px, 3.4vw, 43px) / 1.15 var(--serif);
+}
+
+.product-info > p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.product-price {
+  margin: 24px 0;
+  font: 500 25px var(--serif);
+}
+
+.product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 23px;
+}
+
+.product-meta span {
+  padding: 8px 9px;
+  background: var(--cream);
+  color: #65695f;
+  font-size: 9px;
+}
+
+.product-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-card {
+  border: 1px solid var(--line);
+  background: white;
+  min-width: 0;
+}
+
+.product-card .product-image-wrap {
+  min-height: 235px;
+  aspect-ratio: 4 / 3;
+}
+
+.product-card .product-image-wrap img {
+  min-height: 0;
+}
+
+.product-card .product-info {
+  padding: 25px;
+}
+
+.product-card .product-info h3 {
+  font-size: 25px;
+}
+
+.product-card .product-price {
+  font-size: 21px;
+  margin: 12px 0 20px;
+}
+
+/* -------------------------
+   7. DIVIDEND CALCULATOR
+------------------------- */
+
+.calculator-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(40px, 8vw, 110px);
+  align-items: start;
+  background: var(--green);
+  color: white;
+}
+
+.calculator-intro {
+  position: sticky;
+  top: 30px;
+}
+
+.calculator-intro h2 {
+  margin-top: 20px;
+  font-size: clamp(35px, 4.4vw, 54px);
+}
+
+.calculator-intro > p {
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.calculator-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.23);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.calculator-note svg {
+  flex-shrink: 0;
+  color: #d6c39a;
+}
+
+.calculator-card {
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(23px, 4vw, 43px);
+}
+
+.calculator-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #64896a;
+}
+
+.field {
+  margin-bottom: 21px;
+}
+
+.field > label,
+.label-row > label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555b52;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.field input:not([type="range"]):not([type="checkbox"]),
+.field select {
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 12px;
+  background: white;
+  border: 1px solid #d9dcd3;
+  border-radius: 0;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.input-with-prefix {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d9dcd3;
+  background: white;
+}
+
+.input-with-prefix > span {
+  padding: 0 0 0 13px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.input-with-prefix input {
+  border: 0 !important;
+  outline-offset: -2px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-value {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.field input[type="range"] {
+  width: 100%;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-field input {
+  accent-color: var(--green);
+}
+
+.checkbox-field label {
+  margin: 0;
+  font-size: 11px;
+  color: #555b52;
+}
+
+.calculate-button {
+  width: 100%;
+  margin-top: 3px;
+}
+
+.results {
+  margin-top: 26px;
+  padding: 25px;
+  background: var(--cream);
+}
+
+.results-label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.result-main {
+  margin: 12px 0 20px;
+  font: 500 clamp(32px, 4vw, 43px) var(--serif);
+  color: var(--green);
+  overflow-wrap: anywhere;
+}
+
+.result-divider {
+  border-top: 1px solid #dedfd6;
+  margin-bottom: 17px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 15px;
+  padding: 10px 0;
+  font-size: 11px;
+}
+
+.result-row span {
+  color: var(--muted);
+}
+
+.result-row strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.result-disclaimer {
+  padding-top: 14px;
+  margin-bottom: 0;
+  border-top: 1px solid #dedfd6;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   8. FINANCIAL JOURNAL — REFINED EDITORIAL LAYOUT
+   Uses the existing app.js journal class names.
+========================================================= */
+
+.insights {
+  background: var(--cream);
+}
+
+/* Give the section more breathing room on large screens. */
+.insights.section-pad {
+  padding-top: clamp(78px, 8vw, 112px);
+  padding-bottom: clamp(78px, 8vw, 112px);
+}
+
+/* Keep the content broad but avoid overly long reading lines. */
+.insights > .section-heading,
+.insights > .news-status,
+.insights > .news-grid,
+.insights > .news-attribution {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insights > .section-heading {
+  margin-bottom: 30px;
+}
+
+.insights .section-heading h2 {
+  max-width: 760px;
+  font-size: clamp(36px, 4.5vw, 58px);
+  line-height: 1.12;
+}
+
+.news-status {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+/* Two-column editorial grid. */
+.news-grid.journal-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, 0.92fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 58px);
+}
+
+.journal-feature-column,
+.journal-latest-column {
+  min-width: 0;
+}
+
+/* Column labels. */
+.journal-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 0 0 15px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  color: #8c7447;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.6;
+}
+
+.journal-section-heading span:last-child {
+  color: var(--muted);
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+/* Base article card. */
+.journal-card {
+  min-width: 0;
+  padding: 0 0 24px;
+  margin: 0 0 24px;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+
+.journal-featured {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  transition: border-color 0.25s ease;
+}
+
+.journal-featured:hover {
+  border-color: #c7b58d;
+}
+
+/* Image links and responsive image frames. */
+.journal-image-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.journal-art {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #e6e5db;
+}
+
+.journal-featured .journal-art {
+  aspect-ratio: 16 / 10;
+}
+
+.journal-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.journal-image-link:hover img {
+  transform: scale(1.035);
+}
+
+/* Branded fallback for articles without an available image. */
+.journal-art-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: clamp(22px, 3vw, 40px);
+  color: #e1d0a6;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      #345b49 0,
+      transparent 44%
+    ),
+    linear-gradient(145deg, #183d30, #0e271f);
+}
+
+.journal-art-empty span,
+.journal-art-empty small {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.journal-art-empty strong {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(26px, 3.3vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.journal-image-missing {
+  background: #183d30;
+}
+
+/* Article text. */
+.journal-card-body {
+  min-width: 0;
+  padding-top: 17px;
+}
+
+.journal-featured .journal-card-body {
+  padding: clamp(22px, 3vw, 38px);
+}
+
+.journal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.journal-dot {
+  width: 3px;
+  height: 3px;
+  flex: 0 0 3px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.journal-category {
+  margin: 14px 0 8px;
+  color: #8d774e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.journal-card h3 {
+  margin: 9px 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+}
+
+.journal-featured h3 {
+  max-width: 760px;
+  font-size: clamp(29px, 3.1vw, 41px);
+  line-height: 1.2;
+}
+
+.journal-card h3 a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.journal-card h3 a:hover {
+  color: #8d774e;
+}
+
+.journal-excerpt {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.journal-no-excerpt {
+  font-style: italic;
+}
+
+.journal-read-link {
+  display: inline-block;
+  color: var(--green-deep);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.8;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 3px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.journal-read-link:hover {
+  color: #8d774e;
+  border-color: var(--green);
+}
+
+/* Latest stories: image left, text right. */
+.journal-latest-column .journal-card {
+  display: grid;
+  grid-template-columns:
+    minmax(125px, 0.82fr)
+    minmax(0, 1.18fr);
+  align-items: start;
+  gap: clamp(15px, 2vw, 22px);
+  padding: 0 0 23px;
+  margin: 0 0 23px;
+}
+
+.journal-latest-column .journal-card:last-child {
+  margin-bottom: 0;
+}
+
+.journal-latest-column .journal-art {
+  aspect-ratio: 4 / 3;
+}
+
+.journal-latest-column .journal-card-body {
+  padding-top: 0;
+}
+
+.journal-latest-column .journal-meta {
+  font-size: 9px;
+  gap: 6px;
+}
+
+.journal-latest-column .journal-category {
+  margin-top: 9px;
+  margin-bottom: 6px;
+  font-size: 8px;
+}
+
+.journal-latest-column .journal-card h3 {
+  margin: 6px 0 9px;
+  font-size: clamp(17px, 1.45vw, 21px);
+  line-height: 1.35;
+}
+
+.journal-latest-column .journal-excerpt {
+  margin-bottom: 12px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.journal-latest-column .journal-read-link {
+  font-size: 9px;
+}
+
+/* Attribution and source note. */
+.news-attribution {
+  max-width: var(--content-max);
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* Optional empty/error state. */
+.news-fallback {
+  grid-column: 1 / -1;
+  padding: clamp(25px, 5vw, 50px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.news-fallback h3 {
+  margin: 15px 0;
+  font: 400 32px / 1.25 var(--serif);
+}
+
+.news-fallback > p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.fallback-links {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.fallback-links > a {
+  padding: 20px;
+  border: 1px solid var(--line);
+  transition: border-color 0.2s ease;
+}
+
+.fallback-links > a:hover {
+  border-color: var(--gold);
+}
+
+.fallback-links span {
+  color: #8d774e;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.fallback-links strong {
+  display: block;
+  margin-top: 12px;
+  font: 500 19px / 1.4 var(--serif);
+}
+
+.fallback-links p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* -------------------------
+   9. CLOSING CTA
+------------------------- */
+
+.closing-cta {
+  padding: 100px var(--page-pad);
+  text-align: center;
+  background: var(--green-deep);
+  color: white;
+}
+
+.closing-cta h2 {
+  margin-top: 20px;
+  font-size: clamp(39px, 5vw, 63px);
+}
+
+.closing-cta h2 em {
+  color: #d4c19a;
+}
+
+.closing-cta > p {
+  max-width: 470px;
+  margin: 20px auto 28px;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* -------------------------
+   10. FOOTER
+------------------------- */
+
+.site-footer {
+  padding: 40px var(--page-pad) 20px;
+  background: var(--paper);
+}
+
+.footer-disclaimer {
+  max-width: 600px;
+  margin: 25px 0 30px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.footer-bottom > div {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-bottom a:hover {
+  color: var(--green);
+}
+
+/* =========================================================
+   11. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .site-header {
+    height: 72px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    padding: 24px var(--page-pad);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav > a {
+    padding: 14px 0;
+  }
+
+  .main-nav .nav-cta {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .hero {
+    height: calc(100svh - 72px);
+    min-height: 570px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .featured-product {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image-wrap,
+  .product-image-wrap img {
+    min-height: 330px;
+  }
+
+  .calculator-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .calculator-intro {
+    position: static;
+  }
+
+  .news-grid.journal-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+  }
+
+  .journal-featured .journal-art {
+    aspect-ratio: 16 / 8.5;
+  }
+
+  .journal-featured h3 {
+    font-size: clamp(30px, 4vw, 42px);
+  }
+
+  .journal-latest-column .journal-card {
+    grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.3fr);
+  }
+
+  .journal-latest-column .journal-card h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   12. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  :root {
+    --page-pad: 22px;
+  }
+
+  .section-pad {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-top: 75px;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(11, 30, 23, 0.83),
+        rgba(11, 30, 23, 0.45)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        transparent
+      );
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 11vw, 61px);
+  }
+
+  .hero-content > p {
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .hero-bottom {
+    grid-template-columns: 1fr auto;
+    row-gap: 16px;
+  }
+
+  .hero-caption {
+    grid-column: 1 / -1;
+  }
+
+  .slide-indicators {
+    justify-self: start;
+  }
+
+  .slide-count {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .principle {
+    padding: 24px 0;
+  }
+
+  .principle + .principle {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .collection-label {
+    white-space: normal;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image-wrap,
+  .product-image-wrap img {
+    min-height: 290px;
+  }
+
+  .product-info {
+    padding: 27px;
+  }
+
+  .calculator-card {
+    padding: 22px 17px;
+  }
+
+  .results {
+    padding: 20px 15px;
+  }
+
+  .result-row {
+    font-size: 10px;
+  }
+
+  /* Financial Journal mobile refinements. */
+  .insights.section-pad {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .insights .section-heading h2 {
+    font-size: clamp(35px, 10vw, 45px);
+  }
+
+  .news-grid.journal-layout {
+    gap: 34px;
+  }
+
+  .journal-section-heading {
+    margin-bottom: 18px;
+    font-size: 9px;
+  }
+
+  .journal-featured .journal-art {
+    aspect-ratio: 4 / 3;
+  }
+
+  .journal-featured .journal-card-body {
+    padding: 21px;
+  }
+
+  .journal-featured h3 {
+    font-size: clamp(27px, 7.5vw, 34px);
+  }
+
+  .journal-featured .journal-excerpt {
+    font-size: 11px;
+  }
+
+  .journal-latest-column .journal-card {
+    grid-template-columns: minmax(100px, 0.8fr) minmax(0, 1.2fr);
+    gap: 14px;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+  }
+
+  .journal-latest-column .journal-art {
+    aspect-ratio: 4 / 3;
+  }
+
+  .journal-latest-column .journal-card h3 {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .journal-latest-column .journal-meta {
+    font-size: 8px;
+  }
+
+  .journal-latest-column .journal-excerpt {
+    font-size: 10px;
+    line-height: 1.65;
+  }
+
+  .journal-read-link {
+    font-size: 9px;
+  }
+
+  .journal-excerpt {
+    font-size: 11px;
+  }
+
+  .fallback-links {
+    grid-template-columns: 1fr;
+  }
+
+  .closing-cta {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-bottom > div {
+    flex-wrap: wrap;
+  }
+}
+
+/* -------------------------
+   13. LARGE DESKTOP
+------------------------- */
+
+@media (min-width: 1600px) {
+  :root {
+    --page-pad: max(
+      96px,
+      calc((100vw - 1440px) / 2)
+    );
+  }
+}
+
+/* -------------------------
+   14. REDUCED MOTION
+------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   MOBILE NAV — SMOOTH DROPDOWN ANIMATION
+======================================== */
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    z-index: 30;
+    cursor: pointer;
+  }
+
+  .menu-toggle svg {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+  }
+
+  .main-nav {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 12px var(--page-pad) 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 14px 25px rgba(16, 42, 34, 0.08);
+
+    transform: translateY(-12px);
+    clip-path: inset(0 0 100% 0);
+
+    transition:
+      opacity 0.28s ease,
+      transform 0.35s ease,
+      clip-path 0.35s ease,
+      visibility 0.35s;
+  }
+
+  .main-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  .main-nav > a {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+
+    opacity: 0;
+    transform: translateY(-6px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.3s ease,
+      color 0.2s ease;
+  }
+
+  .main-nav.is-open > a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .main-nav.is-open > a:nth-child(1) {
+    transition-delay: 0.04s;
+  }
+
+  .main-nav.is-open > a:nth-child(2) {
+    transition-delay: 0.08s;
+  }
+
+  .main-nav.is-open > a:nth-child(3) {
+    transition-delay: 0.12s;
+  }
+
+  .main-nav.is-open > a:nth-child(4) {
+    transition-delay: 0.16s;
+  }
+
+  .main-nav .nav-cta {
+    margin-top: 16px;
+    padding: 15px 19px;
+    border-bottom: 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav,
+  .main-nav > a,
+  .menu-toggle svg {
+    transition: none !important;
+  }
+}
+
+/* Anchor navigation spacing */
+#resources {
+  scroll-margin-top: 0;
+}
+
+#about,
+#calculator,
+#insights {
+  scroll-margin-top: 0;
+}

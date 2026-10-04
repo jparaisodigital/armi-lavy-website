@@ -1,0 +1,4 @@
+
+name = "armi-finance-news"
+main = "src/index.js"
+compatibility_date = "2026-10-04"
