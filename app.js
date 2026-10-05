@@ -631,3 +631,15 @@ loadNews();
     }
   });
 })();
+
+/* ===== Footer contact email (shows only if set in config.js) ===== */
+(() => {
+  const email = window.SITE_CONFIG && window.SITE_CONFIG.brand && window.SITE_CONFIG.brand.email;
+  if (!email || !/^\S+@\S+\.\S+$/.test(email)) return;
+  const item = document.getElementById("footerEmailItem");
+  const link = document.getElementById("footerEmail");
+  if (!item || !link) return;
+  link.href = "mailto:" + email;
+  link.textContent = email;
+  item.hidden = false;
+})();

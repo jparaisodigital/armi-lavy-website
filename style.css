@@ -1915,3 +1915,47 @@ section[id] {
   color: var(--muted);
   line-height: 1.75;
 }
+
+/* ===== Footer: connect & contact ===== */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.footer-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.footer-links li[hidden] { display: none; }
+
+.footer-links a {
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--green);
+  border-bottom-color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .footer-top { flex-direction: column; gap: 28px; }
+}
