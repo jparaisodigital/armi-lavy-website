@@ -80,7 +80,16 @@ const SITE_CONFIG = {
     limit: 6,
     apiUrl:
       "https://armi-finance-news.armilavy1986.workers.dev/api/news"
+  },
+
+  newsletter: {
+    enabled: false,          // gawing true kapag may formAction na
+    formAction: "",          // POST URL ng form mula sa email provider
+    emailField: "email",     // pangalan ng email field (depende sa provider)
+    leadMagnetUrl: "",       // link ng libreng PDF, ipapakita pagkatapos mag-subscribe
+    leadMagnetLabel: "Download your free checklist"
   }
+
 };
 
 window.SITE_CONFIG = SITE_CONFIG;

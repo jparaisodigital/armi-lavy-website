@@ -568,3 +568,66 @@ async function loadNews() {
 
 loadNews();
   })();
+
+
+  /* ===== Email signup ===== */
+(() => {
+  "use strict";
+
+  const cfg = window.SITE_CONFIG && window.SITE_CONFIG.newsletter;
+  const section = document.getElementById("newsletter");
+  if (!section || !cfg || !cfg.enabled || !cfg.formAction) return;
+
+  section.hidden = false;
+
+  const form = document.getElementById("newsletterForm");
+  const emailInput = document.getElementById("newsletterEmail");
+  const status = document.getElementById("newsletterStatus");
+  const button = form.querySelector("button[type='submit']");
+
+  const setStatus = (message, type) => {
+    status.textContent = message;
+    status.dataset.state = type || "";
+  };
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (form.elements.website.value) return; // honeypot: bot
+
+    const email = emailInput.value.trim();
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setStatus("Please enter a valid email address.", "error");
+      emailInput.focus();
+      return;
+    }
+
+    button.disabled = true;
+    setStatus("Subscribing…", "");
+
+    try {
+      const body = new FormData();
+      body.append(cfg.emailField || "email", email);
+
+      await fetch(cfg.formAction, { method: "POST", mode: "no-cors", body });
+
+      form.reset();
+      setStatus("Thank you! Please check your inbox to confirm your subscription.", "success");
+
+      if (cfg.leadMagnetUrl && /^(https:\/\/|\/)/.test(cfg.leadMagnetUrl)) {
+        const link = document.createElement("a");
+        link.href = cfg.leadMagnetUrl;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.className = "text-link dark-link";
+        link.textContent = cfg.leadMagnetLabel || "Download your free resource";
+        status.append(" ", link);
+      }
+    } catch (error) {
+      console.error("Newsletter signup:", error);
+      setStatus("Something went wrong. Please try again in a moment.", "error");
+    } finally {
+      button.disabled = false;
+    }
+  });
+})();

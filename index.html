@@ -44,6 +44,65 @@
   <link rel="stylesheet" href="style.css" />
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.armilavyfinance.com/#website",
+          "url": "https://www.armilavyfinance.com/",
+          "name": "Armi L. Lavy",
+          "description": "Beginner-friendly investing education, financial tools, and market insights.",
+          "publisher": { "@id": "https://www.armilavyfinance.com/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.armilavyfinance.com/#person",
+          "name": "Armi L. Lavy",
+          "url": "https://www.armilavyfinance.com/",
+          "image": "https://www.armilavyfinance.com/assets/link.jpg",
+          "sameAs": [
+            "https://www.facebook.com/armilavy1986",
+            "https://armilavy.gumroad.com"
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "First Dividend Paycheck",
+          "description": "A plain-English guide to dividend investing for beginners: evaluating dividend safety, building a starter portfolio, and creating a practical investing routine.",
+          "image": "https://www.armilavyfinance.com/assets/first.png",
+          "brand": { "@type": "Brand", "name": "Armi L. Lavy" },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://armilavy.gumroad.com/l/first-dividend-paycheck",
+            "price": "9.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Who is the First Dividend Paycheck guide for?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It is written for beginners who want a plain-English introduction to dividend investing, with no prior experience needed." } },
+            { "@type": "Question", "name": "What is included in the guide?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It covers how dividend investing works, how to evaluate dividend safety, how to think about a starter portfolio, and how to build a practical investing routine. It comes as a PDF plus an interactive HTML version." } },
+            { "@type": "Question", "name": "Is this financial advice?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Everything on this site is for educational purposes only and is not individualized financial, tax, or investment advice. Investing involves risk, including loss of principal." } },
+            { "@type": "Question", "name": "How do I receive the guide after purchase?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Purchases are processed securely through Gumroad. After checkout, you get access to your download through Gumroad." } },
+            { "@type": "Question", "name": "How accurate is the dividend calculator?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The calculator gives estimates based on the numbers you enter. Real dividends, prices, and taxes change over time, so results are not guaranteed." } },
+            { "@type": "Question", "name": "Do I need a lot of money to start learning?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Learning the basics costs nothing, and the calculator lets you test small amounts. How much to invest, and whether to invest at all, depends on your own situation." } }
+          ]
+        }
+      ]
+    }
+    </script>
+    
 </head>
 
 <body>
@@ -122,7 +181,33 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- MARQUEE STRIP -->
+<section class="marquee" aria-label="Topics and community">
+  <div class="marquee-track">
+    <ul class="marquee-group">
+      <li>Dividends</li>
+      <li>Index Funds</li>
+      <li><a href="https://www.facebook.com/armilavy1986" target="_blank" rel="noopener">13K+ Followers</a></li>
+      <li>Retirement Planning</li>
+      <li>ETFs</li>
+      <li>The Dividend Diary</li>
+      <li>Compounding</li>
+      <li>Emergency Fund</li>
+    </ul>
+    <ul class="marquee-group" aria-hidden="true">
+      <li>Dividends</li>
+      <li>Index Funds</li>
+      <li><a href="https://www.facebook.com/armilavy1986" target="_blank" rel="noopener" tabindex="-1">13K+ Followers</a></li>
+      <li>Retirement Planning</li>
+      <li>ETFs</li>
+      <li>The Dividend Diary</li>
+      <li>Compounding</li>
+      <li>Emergency Fund</li>
+    </ul>
+  </div>
+</section>
+
     <!-- BRAND INTRODUCTION -->
     <section class="intro section-pad" id="about">
       <div class="section-kicker">THE PHILOSOPHY</div>
@@ -323,6 +408,37 @@
       </div>
     </section>
 
+    <!-- EMAIL SIGNUP -->
+<section class="newsletter section-pad" id="newsletter" hidden>
+  <div class="newsletter-inner">
+    <div class="newsletter-copy">
+      <div class="section-kicker">STAY IN THE LOOP</div>
+      <h2>Learn at your own pace, <em>one email at a time.</em></h2>
+      <p id="newsletterPitch">
+        Join the list for new guides, simple investing lessons, and
+        updates from Armi. No spam, unsubscribe anytime.
+      </p>
+    </div>
+
+    <form class="newsletter-form" id="newsletterForm" novalidate>
+      <label for="newsletterEmail">Email address</label>
+      <div class="newsletter-row">
+        <input id="newsletterEmail" type="email" name="email"
+          placeholder="you@example.com" autocomplete="email" required />
+        <button class="button button-dark" type="submit">Subscribe</button>
+      </div>
+      <!-- Honeypot: hidden from real people, bots fill it -->
+      <input class="hp-field" type="text" name="website" tabindex="-1"
+        autocomplete="off" aria-hidden="true" />
+      <p class="newsletter-note">
+        By subscribing, you agree to receive emails from Armi L. Lavy.
+        Educational content only, not financial advice.
+      </p>
+      <p class="newsletter-status" id="newsletterStatus" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
     <!-- FINANCIAL NEWS -->
     <section class="insights section-pad" id="insights">
       <div class="section-heading">
@@ -349,6 +465,46 @@
         and does not constitute investment advice.
       </p>
     </section>
+
+    <!-- FAQ -->
+<section class="faq section-pad" id="faq">
+  <div class="section-heading">
+    <div>
+      <div class="section-kicker">QUESTIONS</div>
+      <h2>Good to know.</h2>
+      <p class="section-description">
+        Quick answers before you get started.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-list">
+    <details>
+      <summary>Who is the First Dividend Paycheck guide for?</summary>
+      <p>It is written for beginners who want a plain-English introduction to dividend investing, with no prior experience needed.</p>
+    </details>
+    <details>
+      <summary>What is included in the guide?</summary>
+      <p>It covers how dividend investing works, how to evaluate dividend safety, how to think about a starter portfolio, and how to build a practical investing routine. It comes as a PDF plus an interactive HTML version.</p>
+    </details>
+    <details>
+      <summary>Is this financial advice?</summary>
+      <p>No. Everything on this site is for educational purposes only and is not individualized financial, tax, or investment advice. Investing involves risk, including loss of principal.</p>
+    </details>
+    <details>
+      <summary>How do I receive the guide after purchase?</summary>
+      <p>Purchases are processed securely through Gumroad. After checkout, you get access to your download through Gumroad.</p>
+    </details>
+    <details>
+      <summary>How accurate is the dividend calculator?</summary>
+      <p>The calculator gives estimates based on the numbers you enter. Real dividends, prices, and taxes change over time, so results are not guaranteed.</p>
+    </details>
+    <details>
+      <summary>Do I need a lot of money to start learning?</summary>
+      <p>No. Learning the basics costs nothing, and the calculator lets you test small amounts. How much to invest, and whether to invest at all, depends on your own situation.</p>
+    </details>
+  </div>
+</section>
 
     <!-- FINAL CTA -->
     <section class="closing-cta">
