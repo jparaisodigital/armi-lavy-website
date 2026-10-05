@@ -1959,3 +1959,60 @@ section[id] {
 @media (max-width: 700px) {
   .footer-top { flex-direction: column; gap: 28px; }
 }
+
+/* ===== Footer icons ===== */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--green);
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn:hover,
+.social-btn:focus-visible {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--paper);
+}
+
+.social-btn:focus-visible,
+.contact-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 0;
+}
+
+.contact-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.footer-links a.contact-link:hover,
+.footer-links a.contact-link:focus-visible {
+  border-bottom-color: transparent;
+  color: var(--green);
+}
