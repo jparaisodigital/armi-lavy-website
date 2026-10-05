@@ -79,7 +79,7 @@ const SITE_CONFIG = {
     enabled: true,
     limit: 6,
     apiUrl:
-      "https://armi-finance-news.jparaiso-digital.workers.dev/api/news"
+      "https://armi-finance-news.armilavy1986.workers.dev/api/news"
   }
 };
 
