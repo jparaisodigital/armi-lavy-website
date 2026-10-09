@@ -795,3 +795,131 @@ html.reveal [data-reveal] {
   @media (max-width: 600px) {
     .to-top { width: 48px; height: 48px; }
   }
+
+  /* =========================================================
+   SUBPAGES: page hero, teasers, active nav
+   ========================================================= */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--green);
+    color: #f1eee2;
+    padding: clamp(72px, 10vw, 140px) var(--page-pad) clamp(56px, 8vw, 100px);
+  }
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(55% 80% at 90% 10%, rgba(155, 174, 146, 0.22), transparent 70%),
+      radial-gradient(40% 50% at 5% 100%, rgba(240, 223, 166, 0.10), transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero-inner { position: relative; max-width: var(--content-max); margin: 0 auto; }
+  .page-hero h1 {
+    margin: 18px 0 20px;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    max-width: 12em;
+    text-wrap: balance;
+  }
+  .page-hero p {
+    margin: 0;
+    max-width: 52ch;
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.6;
+    color: rgba(241, 238, 226, 0.82);
+  }
+  
+  /* active nav link */
+  .main-nav > a[aria-current="page"]:not(.nav-cta) { color: var(--sage-deep); }
+  .main-nav > a[aria-current="page"]:not(.nav-cta)::after { transform: scaleX(1); }
+  
+  /* learn page: target highlight (works with JS-rendered items) */
+  .gl-item.is-target {
+    background: var(--green-soft);
+    border-radius: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* ---------- homepage teasers ---------- */
+  .teasers { background: var(--paper); }
+  .teasers-head { margin-bottom: clamp(28px, 4vw, 48px); max-width: 640px; }
+  .teasers-head h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .teasers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 32px);
+  }
+  @media (max-width: 900px) { .teasers-grid { grid-template-columns: 1fr; } }
+  
+  .teaser-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 28px;
+    padding: clamp(26px, 3.6vw, 44px);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  }
+  .teaser-card:hover { transform: translateY(-4px); box-shadow: 0 22px 44px rgba(24, 26, 25, 0.14); }
+  .teaser-dark  { background: var(--green); color: #f1eee2; }
+  .teaser-light { background: var(--green-soft); color: var(--ink); }
+  
+  .teaser-label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; }
+  .teaser-dark .teaser-label  { color: var(--butter); }
+  .teaser-light .teaser-label { color: var(--sage-deep); }
+  
+  .teaser-card h3 {
+    margin: 14px 0 10px;
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .teaser-card p { margin: 0 0 20px; font-size: 17px; line-height: 1.6; max-width: 40ch; opacity: 0.85; }
+  .teaser-list { list-style: none; margin: 0 0 32px; padding: 0; }
+  .teaser-list li { padding: 11px 0; border-top: 1px solid rgba(127, 136, 120, 0.35); font-size: 16px; }
+  .teaser-cta {
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .teaser-cta span { transition: transform 0.3s ease; }
+  .teaser-card:hover .teaser-cta span { transform: translateX(6px); }
+
+  /* =========================================================
+   PAGE LOAD ANIMATION
+   ========================================================= */
+@media (prefers-reduced-motion: no-preference) {
+    body {
+      animation: pageIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+  
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+
+  /* Hide primary hero button on mobile */
+@media (max-width: 600px) {
+    .hero-actions .button {
+      display: none;
+    }
+  }

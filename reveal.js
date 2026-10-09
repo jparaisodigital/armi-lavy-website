@@ -5,6 +5,12 @@
     // [selector, animation type]. The first match wins if an element appears twice.
     const MAP = [
       [".marquee", "fade"],
+
+      [".page-hero .section-kicker", "up"],
+      [".page-hero h1", "mask"],
+      [".page-hero p", "up"],
+      [".teasers-head", "up"],
+      [".teaser-card", "zoom"],
   
       [".intro .section-kicker", "up"],
       [".intro h2", "mask"],

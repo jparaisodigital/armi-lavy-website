@@ -228,6 +228,8 @@
     }
   
     renderProducts();
+
+    if ($("#dividendForm")) {
   
     // DIVIDEND CALCULATOR
     const currencySelect = $("#currency");
@@ -329,7 +331,7 @@
   
     syncCurrency();
   
-    
+  }
   
 /* ARMI FINANCIAL JOURNAL — WORKER API */
 

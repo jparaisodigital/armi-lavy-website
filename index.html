@@ -41,8 +41,6 @@
   <link rel="stylesheet" href="theme.css?v=1" />
   <script src="config.js?v=2" defer></script>
   <script src="app.js?v=2" defer></script>
-  <script src="tools.js?v=1" defer></script>
-  <script src="glossary.js?v=1" defer></script>
   <script src="reveal.js?v=1" defer></script>
   <script src="backtotop.js?v=1" defer></script>
 
@@ -82,23 +80,6 @@
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock"
           }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "Who is the First Dividend Paycheck guide for?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It is written for beginners who want a plain-English introduction to dividend investing, with no prior experience needed." } },
-            { "@type": "Question", "name": "What is included in the guide?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It covers how dividend investing works, how to evaluate dividend safety, how to think about a starter portfolio, and how to build a practical investing routine. It comes as a PDF plus an interactive HTML version." } },
-            { "@type": "Question", "name": "Is this financial advice?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. Everything on this site is for educational purposes only and is not individualized financial, tax, or investment advice. Investing involves risk, including loss of principal." } },
-            { "@type": "Question", "name": "How do I receive the guide after purchase?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Purchases are processed securely through Gumroad. After checkout, you get access to your download through Gumroad." } },
-            { "@type": "Question", "name": "How accurate is the dividend calculator?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The calculator gives estimates based on the numbers you enter. Real dividends, prices, and taxes change over time, so results are not guaranteed." } },
-            { "@type": "Question", "name": "Do I need a lot of money to start learning?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. Learning the basics costs nothing, and the calculator lets you test small amounts. How much to invest, and whether to invest at all, depends on your own situation." } }
-          ]
         }
       ]
     }
@@ -124,7 +105,8 @@
     <nav class="main-nav" id="mainNav">
       <a href="#about">About</a>
       <a href="#resources">Resources</a>
-      <a href="#calculator">Tools</a>
+      <a href="tools.html">Tools</a>
+      <a href="learn.html">Learn</a>
       <a href="#insights">Insights</a>
       <a class="nav-cta" href="#resources">Explore the Guide</a>
     </nav>
@@ -292,228 +274,36 @@
       </div>
     </section>
 
-    <!-- DIVIDEND CALCULATOR -->
-    <section class="calculator-section section-pad" id="calculator">
-      <div class="calculator-intro">
-        <div class="section-kicker">FREE FINANCIAL TOOL</div>
-        <h2>See what your dividends could look like.</h2>
-        <p>
-          Explore an illustrative dividend-income estimate using your
-          investment amount, contribution plan, and assumed
-          <button type="button" class="gl-term" data-gl="dividend-yield">annual yield</button>.
-        </p>
-        <div class="calculator-note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.5" width="22" height="22" aria-hidden="true">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 11v5M12 7h.01"/>
-          </svg>
-          <span>
-            Estimates only. Actual dividends, share prices, and returns
-            may vary. This tool does not forecast or guarantee performance.
-          </span>
-        </div>
-      </div>
-
-      <div class="calculator-card">
-        <div class="calculator-card-head">
-          <span>DIVIDEND INCOME ESTIMATOR</span>
-          <span class="status-dot"></span>
-        </div>
-
-        <form id="dividendForm">
-          <div class="field">
-            <label for="currency">Display currency</label>
-            <select id="currency">
-              <option value="USD">US Dollar (USD)</option>
-              <option value="PHP">Philippine Peso (PHP)</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="initialInvestment">Initial investment</label>
-            <div class="input-with-prefix">
-              <span id="currencyPrefix">$</span>
-              <input id="initialInvestment" type="number"
-                min="0" max="100000000000" step="100"
-                value="5000" required />
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="monthlyContribution">Monthly contribution</label>
-            <div class="input-with-prefix">
-              <span id="monthlyPrefix">$</span>
-              <input id="monthlyContribution" type="number"
-                min="0" max="1000000000" step="50"
-                value="200" required />
-            </div>
-          </div>
-
-          <div class="field">
-            <div class="label-row">
-              <label for="dividendYield">Assumed annual dividend yield</label>
-              <span class="range-value" id="yieldValue">4.0%</span>
-            </div>
-            <input id="dividendYield" type="range"
-              min="0" max="15" step="0.25" value="4" />
-            <div class="range-labels">
-              <span>0%</span><span>15%</span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="years">Investment period</label>
-            <select id="years">
-              <option value="1">1 year</option>
-              <option value="3">3 years</option>
-              <option value="5" selected>5 years</option>
-              <option value="10">10 years</option>
-              <option value="20">20 years</option>
-              <option value="30">30 years</option>
-            </select>
-          </div>
-
-          <div class="field checkbox-field">
-            <input id="reinvest" type="checkbox" checked />
-            <label for="reinvest">
-              Reinvest estimated dividends
-            </label>
-          </div>
-
-          <button class="button button-dark calculate-button"
-            type="submit">Calculate estimate</button>
-        </form>
-
-        <div class="results" id="calculatorResults" aria-live="polite">
-          <div class="results-label">ESTIMATED ANNUAL DIVIDENDS</div>
-          <div class="result-main" id="annualResult">$0</div>
-
-          <div class="result-divider"></div>
-
-          <div class="result-row">
-            <span>Estimated monthly average</span>
-            <strong id="monthlyResult">$0</strong>
-          </div>
-          <div class="result-row">
-            <span>Estimated portfolio value</span>
-            <strong id="portfolioResult">$0</strong>
-          </div>
-          <div class="result-row">
-            <span>Total contributions</span>
-            <strong id="contributionsResult">$0</strong>
-          </div>
-          <p class="result-disclaimer" id="resultDisclaimer">
-            Based on your selected assumptions. Not a prediction of actual returns.
-          </p>
-        </div>
-      </div>
-    </section>
-
-        <!-- MORE FREE TOOLS -->
-        <section class="tools-section section-pad" id="tools">
-          <div class="tools-head">
-            <div class="section-kicker">MORE FREE TOOLS</div>
-            <h2>Start with the goal. Then check the company.</h2>
-            <p>
-              Two simple tools to help you think through your dividend goals
-              and what makes a dividend payer worth a closer look.
-            </p>
+        <!-- TOOLS + LEARN TEASERS -->
+        <section class="teasers section-pad" id="explore">
+          <div class="teasers-head">
+            <div class="section-kicker">FREE TO USE</div>
+            <h2>Explore at your own pace.</h2>
           </div>
     
-          <div class="tools-grid">
+          <div class="teasers-grid">
+            <a class="teaser-card teaser-dark" href="tools.html">
+              <span class="teaser-label">FREE TOOLS</span>
+              <h3>Run the numbers.</h3>
+              <p>Estimate dividend income, plan toward a monthly goal, and check how sturdy a dividend looks.</p>
+              <ul class="teaser-list">
+                <li>Dividend income estimator</li>
+                <li>Dividend goal planner</li>
+                <li>Dividend safety checklist</li>
+              </ul>
+              <span class="teaser-cta">Open the tools <span aria-hidden="true">→</span></span>
+            </a>
     
-            <!-- TOOL 1: DIVIDEND GOAL -->
-            <article class="tool-card" id="goalTool">
-              <div class="tool-label">DIVIDEND GOAL PLANNER</div>
-              <h3>How much would I need to invest?</h3>
-              <p class="tool-sub">
-                Pick the monthly dividend income you'd love to have.
-              </p>
-    
-              <div class="field">
-                <label for="goalCurrency">Display currency</label>
-                <select id="goalCurrency">
-                  <option value="USD">US Dollar (USD)</option>
-                  <option value="PHP">Philippine Peso (PHP)</option>
-                </select>
-              </div>
-    
-              <div class="field">
-                <label for="goalIncome">Monthly dividend income I want</label>
-                <div class="input-with-prefix">
-                  <span class="goalPrefix">$</span>
-                  <input id="goalIncome" type="number" min="0" step="50" value="500" />
-                </div>
-              </div>
-    
-              <div class="field">
-                <div class="label-row">
-                  <label for="goalYield">Assumed annual dividend yield</label>
-                  <span class="range-value" id="goalYieldValue">4.0%</span>
-                </div>
-                <input id="goalYield" type="range" min="1" max="10" step="0.25" value="4" />
-                <div class="range-labels"><span>1%</span><span>10%</span></div>
-              </div>
-    
-              <div class="field">
-                <label for="goalStart">What I have to start with</label>
-                <div class="input-with-prefix">
-                  <span class="goalPrefix">$</span>
-                  <input id="goalStart" type="number" min="0" step="100" value="1000" />
-                </div>
-              </div>
-    
-              <div class="field">
-                <label for="goalMonthly">What I can add each month</label>
-                <div class="input-with-prefix">
-                  <span class="goalPrefix">$</span>
-                  <input id="goalMonthly" type="number" min="0" step="50" value="200" />
-                </div>
-              </div>
-    
-              <div class="tool-result" aria-live="polite">
-                <div class="tool-result-label">YOU WOULD NEED ABOUT</div>
-                <div class="tool-result-main" id="goalNeeded">$0</div>
-                <p class="tool-result-text" id="goalTime"></p>
-              </div>
-    
-              <p class="tool-disclaimer">
-                Educational estimate only. Figures are before taxes and assume a
-                constant yield with dividends reinvested. Real yields, prices and
-                dividends change. Not financial advice.
-              </p>
-            </article>
-    
-            <!-- TOOL 2: DIVIDEND SAFETY CHECKLIST -->
-            <article class="tool-card" id="safetyTool">
-              <div class="tool-label">DIVIDEND SAFETY CHECKLIST</div>
-              <h3>Does this dividend look sturdy?</h3>
-              <p class="tool-sub">
-                Think of a company you're curious about and answer honestly.
-                "Not sure" is a perfectly good answer.
-              </p>
-    
-              <div class="checklist" id="safetyQuestions"></div>
-    
-              <div class="tool-progress" id="safetyProgress">0 of 6 answered</div>
-    
-              <div class="tool-result" id="safetyResult" aria-live="polite" hidden>
-                <div class="tool-result-label" id="safetyScore"></div>
-                <div class="tool-result-main tool-result-title" id="safetyTitle"></div>
-                <p class="tool-result-text" id="safetyText"></p>
-                <div class="tool-actions">
-                  <a class="button button-dark" href="#resources">See how the guide teaches this</a>
-                  <button type="button" class="text-link" id="safetyReset">Start over</button>
-                </div>
-              </div>
-    
-              <p class="tool-disclaimer">
-                A learning aid, not a rating. It can't judge a company's future or
-                replace your own research. Not financial advice.
-              </p>
-            </article>
-    
+            <a class="teaser-card teaser-light" href="learn.html">
+              <span class="teaser-label">LEARN</span>
+              <h3>Learn the language.</h3>
+              <p>Money words explained in plain English, plus answers to the questions beginners ask most.</p>
+              <ul class="teaser-list">
+                <li>Searchable glossary</li>
+                <li>Frequently asked questions</li>
+              </ul>
+              <span class="teaser-cta">Start learning <span aria-hidden="true">→</span></span>
+            </a>
           </div>
         </section>
 
@@ -628,78 +418,6 @@
   </div>
 </section>
 
-    <!-- GLOSSARY -->
-    <section class="glossary section-pad" id="glossary">
-      <div class="glossary-side">
-        <div class="section-kicker">PLAIN-ENGLISH GLOSSARY</div>
-        <h2>Money words, explained simply.</h2>
-        <p>Tap any underlined term across the site, or browse everything here.</p>
-        <label class="visually-hidden" for="glSearch">Search the glossary</label>
-        <input id="glSearch" type="search" placeholder="Search a term, like “yield”" autocomplete="off" />
-      </div>
-
-      <div class="glossary-main">
-        <dl class="glossary-list">
-          <div class="gl-item" id="gl-compounding">
-            <dt>Compounding</dt>
-            <dd>Earning returns on your earlier returns. Reinvested dividends buy more shares, which pay more dividends, so growth builds on itself over time.</dd>
-          </div>
-          <div class="gl-item" id="gl-diversification">
-            <dt>Diversification</dt>
-            <dd>Spreading your money across different companies and sectors so one bad result doesn't sink your whole portfolio.</dd>
-          </div>
-          <div class="gl-item" id="gl-dividend">
-            <dt>Dividend</dt>
-            <dd>A portion of a company's profits paid out to its shareholders, usually in cash and often every quarter. Companies aren't required to pay one, and they can reduce or stop it.</dd>
-          </div>
-          <div class="gl-item" id="gl-dividend-aristocrat">
-            <dt>Dividend Aristocrat</dt>
-            <dd>A company in the S&amp;P 500 that has raised its dividend for at least 25 years in a row. It's an impressive track record, but past increases don't guarantee future ones.</dd>
-          </div>
-          <div class="gl-item" id="gl-dividend-yield">
-            <dt>Dividend yield</dt>
-            <dd>The yearly dividend per share divided by the share price, shown as a percentage. A $100 stock paying $4 a year has a 4% yield. Yield rises when the price falls, so a very high yield can be a warning sign rather than a bargain.</dd>
-          </div>
-          <div class="gl-item" id="gl-drip">
-            <dt>DRIP</dt>
-            <dd>A dividend reinvestment plan automatically uses your dividends to buy more shares instead of paying you cash. Many brokerages offer it, often at no extra cost.</dd>
-          </div>
-          <div class="gl-item" id="gl-emergency-fund">
-            <dt>Emergency fund</dt>
-            <dd>Cash set aside for surprises like job loss or repairs, kept separate from your investments. Many people aim for three to six months of expenses.</dd>
-          </div>
-          <div class="gl-item" id="gl-etf">
-            <dt>ETF</dt>
-            <dd>An exchange-traded fund is a basket of many investments that trades like a single stock. A dividend ETF holds lots of dividend-paying companies, so one company cutting its payout matters less.</dd>
-          </div>
-          <div class="gl-item" id="gl-ex-dividend-date">
-            <dt>Ex-dividend date</dt>
-            <dd>The cutoff for receiving the next dividend. You need to own the stock before this date. If you buy on or after it, the payment goes to the previous owner.</dd>
-          </div>
-          <div class="gl-item" id="gl-expense-ratio">
-            <dt>Expense ratio</dt>
-            <dd>The yearly fee a fund charges, shown as a percentage of the money you have in it. A 0.10% expense ratio costs about $1 a year for every $1,000 invested.</dd>
-          </div>
-          <div class="gl-item" id="gl-free-cash-flow">
-            <dt>Free cash flow</dt>
-            <dd>The cash a company has left after paying to run and maintain its business. It's what ultimately funds dividends, which is why many investors watch it as closely as earnings.</dd>
-          </div>
-          <div class="gl-item" id="gl-payout-ratio">
-            <dt>Payout ratio</dt>
-            <dd>The share of a company's earnings paid out as dividends. A $1 dividend on $2 of earnings per share is a 50% payout ratio. A lower ratio usually leaves more room to keep paying in a slow year, though what's normal differs by industry.</dd>
-          </div>
-          <div class="gl-item" id="gl-qualified-dividend">
-            <dt>Qualified dividend</dt>
-            <dd>In the US, a dividend that may be taxed at lower long-term capital gains rates instead of ordinary income rates, if certain holding-period rules are met. Tax rules change, so check IRS guidance or ask a tax professional.</dd>
-          </div>
-          <div class="gl-item" id="gl-reit">
-            <dt>REIT</dt>
-            <dd>A real estate investment trust is a company that owns income-producing property. In the US, REITs generally must pay out at least 90% of their taxable income to shareholders, so they tend to have high yields and high payout ratios.</dd>
-          </div>
-        </dl>
-        <p class="gl-empty" id="glEmpty" hidden>No matching terms yet. Try a shorter word.</p>
-      </div>
-    </section>
 
     <!-- FINAL CTA -->
     <section class="closing-cta">
@@ -778,7 +496,10 @@
       <div>
         <a href="#about">About</a>
         <a href="#resources">Resources</a>
+        <a href="tools.html">Tools</a>
+        <a href="learn.html">Learn</a>
         <a href="#insights">Insights</a>
+        <a href="privacy.html">Privacy</a>
       </div>
     </div>
   </footer>

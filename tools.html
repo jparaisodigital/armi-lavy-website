@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#232625" />
+  <meta name="description" content="Free, beginner-friendly dividend tools: an income estimator, a goal planner, and a simple dividend safety checklist. For education only." />
+  <title>Free Dividend Tools | Armi L. Lavy</title>
+  <link rel="canonical" href="https://www.armilavyfinance.com/tools" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/fav.png" />
+  <link rel="apple-touch-icon" href="/assets/fav.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Armi L. Lavy" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Free Dividend Tools | Armi L. Lavy" />
+  <meta property="og:description" content="Free, beginner-friendly dividend tools: an income estimator, a goal planner, and a simple dividend safety checklist. For education only." />
+  <meta property="og:url" content="https://www.armilavyfinance.com/tools" />
+  <meta property="og:image" content="https://www.armilavyfinance.com/assets/link.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Dividend Tools | Armi L. Lavy" />
+  <meta name="twitter:description" content="Free, beginner-friendly dividend tools: an income estimator, a goal planner, and a simple dividend safety checklist. For education only." />
+  <meta name="twitter:image" content="https://www.armilavyfinance.com/assets/link.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="theme.css?v=1" />
+  <script src="config.js?v=2" defer></script>
+  <script src="site.js?v=1" defer></script>
+  <script src="calculator.js?v=1" defer></script>
+  <script src="tools.js?v=1" defer></script>
+  <script src="glossary.js?v=2" defer></script>
+  <script src="backtotop.js?v=1" defer></script>
+  <script src="reveal.js?v=1" defer></script>
+
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Armi Lavy home">
+      <span class="brand-mark">AL</span>
+      <span class="brand-name">ARMI L. LAVY</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.5" width="25" height="25">
+        <path d="M3 8h18M3 16h18"/>
+      </svg>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="/#about">About</a>
+      <a href="/#resources">Resources</a>
+      <a href="tools.html" aria-current="page">Tools</a>
+      <a href="learn.html">Learn</a>
+      <a href="/#insights">Insights</a>
+      <a class="nav-cta" href="/#resources">Explore the Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="section-kicker light-eyebrow">FREE TOOLS</div>
+        <h1>Run the numbers. Check the company.</h1>
+        <p>Three simple tools to help you estimate dividend income, set a realistic goal, and see what makes a dividend worth a closer look. No sign-up needed.</p>
+      </div>
+    </section>
+
+    <!-- DIVIDEND CALCULATOR -->
+    <section class="calculator-section section-pad" id="calculator">
+      <div class="calculator-intro">
+        <div class="section-kicker">FREE FINANCIAL TOOL</div>
+        <h2>See what your dividends could look like.</h2>
+        <p>
+          Explore an illustrative dividend-income estimate using your
+          investment amount, contribution plan, and assumed
+          <button type="button" class="gl-term" data-gl="dividend-yield">annual yield</button>.
+        </p>
+        <div class="calculator-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" width="22" height="22" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 11v5M12 7h.01"/>
+          </svg>
+          <span>
+            Estimates only. Actual dividends, share prices, and returns
+            may vary. This tool does not forecast or guarantee performance.
+          </span>
+        </div>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calculator-card-head">
+          <span>DIVIDEND INCOME ESTIMATOR</span>
+          <span class="status-dot"></span>
+        </div>
+
+        <form id="dividendForm">
+          <div class="field">
+            <label for="currency">Display currency</label>
+            <select id="currency">
+              <option value="USD">US Dollar (USD)</option>
+              <option value="PHP">Philippine Peso (PHP)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="initialInvestment">Initial investment</label>
+            <div class="input-with-prefix">
+              <span id="currencyPrefix">$</span>
+              <input id="initialInvestment" type="number"
+                min="0" max="100000000000" step="100"
+                value="5000" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="monthlyContribution">Monthly contribution</label>
+            <div class="input-with-prefix">
+              <span id="monthlyPrefix">$</span>
+              <input id="monthlyContribution" type="number"
+                min="0" max="1000000000" step="50"
+                value="200" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label-row">
+              <label for="dividendYield">Assumed annual dividend yield</label>
+              <span class="range-value" id="yieldValue">4.0%</span>
+            </div>
+            <input id="dividendYield" type="range"
+              min="0" max="15" step="0.25" value="4" />
+            <div class="range-labels">
+              <span>0%</span><span>15%</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="years">Investment period</label>
+            <select id="years">
+              <option value="1">1 year</option>
+              <option value="3">3 years</option>
+              <option value="5" selected>5 years</option>
+              <option value="10">10 years</option>
+              <option value="20">20 years</option>
+              <option value="30">30 years</option>
+            </select>
+          </div>
+
+          <div class="field checkbox-field">
+            <input id="reinvest" type="checkbox" checked />
+            <label for="reinvest">
+              Reinvest estimated dividends
+            </label>
+          </div>
+
+          <button class="button button-dark calculate-button"
+            type="submit">Calculate estimate</button>
+        </form>
+
+        <div class="results" id="calculatorResults" aria-live="polite">
+          <div class="results-label">ESTIMATED ANNUAL DIVIDENDS</div>
+          <div class="result-main" id="annualResult">$0</div>
+
+          <div class="result-divider"></div>
+
+          <div class="result-row">
+            <span>Estimated monthly average</span>
+            <strong id="monthlyResult">$0</strong>
+          </div>
+          <div class="result-row">
+            <span>Estimated portfolio value</span>
+            <strong id="portfolioResult">$0</strong>
+          </div>
+          <div class="result-row">
+            <span>Total contributions</span>
+            <strong id="contributionsResult">$0</strong>
+          </div>
+          <p class="result-disclaimer" id="resultDisclaimer">
+            Based on your selected assumptions. Not a prediction of actual returns.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE FREE TOOLS -->
+    <section class="tools-section section-pad" id="tools">
+      <div class="tools-head">
+        <div class="section-kicker">MORE FREE TOOLS</div>
+        <h2>Start with the goal. Then check the company.</h2>
+        <p>
+          Two simple tools to help you think through your dividend goals
+          and what makes a dividend payer worth a closer look.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+
+        <!-- TOOL 1: DIVIDEND GOAL -->
+        <article class="tool-card" id="goalTool">
+          <div class="tool-label">DIVIDEND GOAL PLANNER</div>
+          <h3>How much would I need to invest?</h3>
+          <p class="tool-sub">
+            Pick the monthly dividend income you'd love to have.
+          </p>
+
+          <div class="field">
+            <label for="goalCurrency">Display currency</label>
+            <select id="goalCurrency">
+              <option value="USD">US Dollar (USD)</option>
+              <option value="PHP">Philippine Peso (PHP)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="goalIncome">Monthly dividend income I want</label>
+            <div class="input-with-prefix">
+              <span class="goalPrefix">$</span>
+              <input id="goalIncome" type="number" min="0" step="50" value="500" />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label-row">
+              <label for="goalYield">Assumed annual dividend yield</label>
+              <span class="range-value" id="goalYieldValue">4.0%</span>
+            </div>
+            <input id="goalYield" type="range" min="1" max="10" step="0.25" value="4" />
+            <div class="range-labels"><span>1%</span><span>10%</span></div>
+          </div>
+
+          <div class="field">
+            <label for="goalStart">What I have to start with</label>
+            <div class="input-with-prefix">
+              <span class="goalPrefix">$</span>
+              <input id="goalStart" type="number" min="0" step="100" value="1000" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="goalMonthly">What I can add each month</label>
+            <div class="input-with-prefix">
+              <span class="goalPrefix">$</span>
+              <input id="goalMonthly" type="number" min="0" step="50" value="200" />
+            </div>
+          </div>
+
+          <div class="tool-result" aria-live="polite">
+            <div class="tool-result-label">YOU WOULD NEED ABOUT</div>
+            <div class="tool-result-main" id="goalNeeded">$0</div>
+            <p class="tool-result-text" id="goalTime"></p>
+          </div>
+
+          <p class="tool-disclaimer">
+            Educational estimate only. Figures are before taxes and assume a
+            constant yield with dividends reinvested. Real yields, prices and
+            dividends change. Not financial advice.
+          </p>
+        </article>
+
+        <!-- TOOL 2: DIVIDEND SAFETY CHECKLIST -->
+        <article class="tool-card" id="safetyTool">
+          <div class="tool-label">DIVIDEND SAFETY CHECKLIST</div>
+          <h3>Does this dividend look sturdy?</h3>
+          <p class="tool-sub">
+            Think of a company you're curious about and answer honestly.
+            "Not sure" is a perfectly good answer.
+          </p>
+
+          <div class="checklist" id="safetyQuestions"></div>
+
+          <div class="tool-progress" id="safetyProgress">0 of 6 answered</div>
+
+          <div class="tool-result" id="safetyResult" aria-live="polite" hidden>
+            <div class="tool-result-label" id="safetyScore"></div>
+            <div class="tool-result-main tool-result-title" id="safetyTitle"></div>
+            <p class="tool-result-text" id="safetyText"></p>
+            <div class="tool-actions">
+              <a class="button button-dark" href="/#resources">See how the guide teaches this</a>
+              <button type="button" class="text-link" id="safetyReset">Start over</button>
+            </div>
+          </div>
+
+          <p class="tool-disclaimer">
+            A learning aid, not a rating. It can't judge a company's future or
+            replace your own research. Not financial advice.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="closing-cta">
+      <div class="section-kicker light-eyebrow">WANT TO GO DEEPER?</div>
+      <h2>Understand the why<br /><em>behind the numbers.</em></h2>
+      <p>The First Dividend Paycheck guide walks you through dividend investing in plain English, one step at a time.</p>
+      <a href="/#resources" class="button button-light">Get the Guide</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark">AL</span>
+        <span class="brand-name">ARMI L. LAVY</span>
+      </a>
+  
+      <div class="footer-connect">
+        <div class="footer-label">CONNECT</div>
+        <div class="social-icons">
+          <a class="social-btn" href="https://www.facebook.com/armilavy1986"
+            target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.6V13h2.7v8h3.2z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="https://armilavy.gumroad.com"
+            target="_blank" rel="noopener" aria-label="Gumroad store" title="Gumroad store">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 8h14l-1 12H6L5 8z"/>
+              <path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+  
+      <div class="footer-contact">
+        <div class="footer-label">CONTACT</div>
+        <ul class="footer-links">
+          <li>
+            <a class="contact-link" href="https://m.me/armilavy1986" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.5-5A8.5 8.5 0 1 1 21 11.5z"/>
+              </svg>
+              <span>Message on Facebook</span>
+            </a>
+          </li>
+          <li id="footerEmailItem" hidden>
+            <a class="contact-link" id="footerEmail" href="#">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="1.5"/>
+                <path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>
+              </svg>
+              <span id="footerEmailText"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <p class="footer-disclaimer">
+      Educational content only. Not individualized financial, tax, or
+      investment advice. Investing involves risk, including loss of principal.
+    </p>
+  
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Armi L. Lavy</span>
+      <div>
+        <a href="/#about">About</a>
+        <a href="/#resources">Resources</a>
+        <a href="tools.html">Tools</a>
+        <a href="learn.html">Learn</a>
+        <a href="/#insights">Insights</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
