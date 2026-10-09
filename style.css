@@ -1897,12 +1897,39 @@ section[id] {
   position: absolute;
   right: 4px;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 24px;
+  line-height: 1;
   color: var(--gold);
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.35s ease;
 }
 
-.faq-list details[open] summary::after { content: "–"; }
+.faq-list details.is-open summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-list details p {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease 0.05s, transform 0.3s ease 0.05s;
+}
+
+.faq-list details.is-open p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.no-js .faq-list details[open] p {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-list summary::after,
+  .faq-list details p {
+    transition: none;
+  }
+}
 
 .faq-list summary:focus-visible {
   outline: 2px solid var(--green);

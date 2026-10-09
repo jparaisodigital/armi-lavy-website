@@ -1,5 +1,4 @@
-name = "armi-lavy-website"
-compatibility_date = "2026-10-04"
 
-[assets]
-directory = "./"
+name = "armi-finance-news"
+main = "src/index.js"
+compatibility_date = "2026-10-04"

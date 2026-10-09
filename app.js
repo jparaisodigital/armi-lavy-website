@@ -643,3 +643,70 @@ loadNews();
   link.textContent = email;
   item.hidden = false;
 })();
+
+/* ===== FAQ smooth open/close ===== */
+(() => {
+  const items = document.querySelectorAll(".faq-list details");
+  if (!items.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const DURATION = 350;
+  const EASING = "ease";
+
+  items.forEach((details) => {
+    const summary = details.querySelector("summary");
+    let animation = null;
+
+    const finish = (open) => {
+      details.open = open;
+      details.classList.toggle("is-open", open);
+      details.style.height = "";
+      details.style.overflow = "";
+      animation = null;
+    };
+
+    const animate = (from, to, open) => {
+      if (animation) animation.cancel();
+      details.style.overflow = "hidden";
+      animation = details.animate(
+        { height: [from + "px", to + "px"] },
+        { duration: DURATION, easing: EASING }
+      );
+      animation.onfinish = () => finish(open);
+      animation.oncancel = () => { animation = null; };
+    };
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      // Walang animation kapag naka-"reduce motion"
+      if (reduceMotion.matches) {
+        details.open = !details.open;
+        details.classList.toggle("is-open", details.open);
+        return;
+      }
+
+      const closedHeight = summary.offsetHeight;
+
+      if (details.open && details.classList.contains("is-open")) {
+        // CLOSE
+        details.classList.remove("is-open");
+        details.style.overflow = "hidden";
+        animate(details.offsetHeight, closedHeight, false);
+      } else {
+        // OPEN
+        const startHeight = details.offsetHeight;
+        details.style.overflow = "hidden";
+        details.open = true;
+        details.classList.add("is-open");
+        const endHeight = summary.offsetHeight +
+          details.querySelector("p").offsetHeight +
+          parseFloat(getComputedStyle(details.querySelector("p")).marginBottom || 0);
+        animate(startHeight, endHeight, true);
+      }
+    });
+
+    // Para sa mga naka-open na sa simula
+    if (details.open) details.classList.add("is-open");
+  });
+})();
