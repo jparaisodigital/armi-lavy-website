@@ -1,0 +1,800 @@
+﻿{
+    "fund":  "SCHD",
+    "dataAsOf":  "2026-07-31",
+    "source":  "https://www.schwabassetmanagement.com/sites/g/files/eyrktu361/files/product_files/SCHD/SCHD_FundHoldings_2026-07-31.CSV",
+    "notes":  "Official Schwab holdings export. Cash, money-market, futures, zero-weight, and blank positions excluded.",
+    "holdings":  [
+                     {
+                         "identifier":  "TICKER:ABT:US",
+                         "ticker":  "ABT",
+                         "name":  "ABBOTT LABORATORIES",
+                         "weight":  4.6694591147,
+                         "sector":  "Health Care",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:AMGN:US",
+                         "ticker":  "AMGN",
+                         "name":  "AMGEN INC",
+                         "weight":  4.3835792378,
+                         "sector":  "Health Care",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:MRK:US",
+                         "ticker":  "MRK",
+                         "name":  "MERCK \u0026 CO INC",
+                         "weight":  4.3700223469,
+                         "sector":  "Health Care",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:KO:US",
+                         "ticker":  "KO",
+                         "name":  "COCA-COLA",
+                         "weight":  4.2813256757,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:UNH:US",
+                         "ticker":  "UNH",
+                         "name":  "UNITEDHEALTH GROUP INC",
+                         "weight":  4.2314807302,
+                         "sector":  "Health Care",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:HD:US",
+                         "ticker":  "HD",
+                         "name":  "HOME DEPOT INC",
+                         "weight":  4.0832705723,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CVX:US",
+                         "ticker":  "CVX",
+                         "name":  "CHEVRON CORP",
+                         "weight":  3.9941117611,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:PG:US",
+                         "ticker":  "PG",
+                         "name":  "PROCTER \u0026 GAMBLE",
+                         "weight":  3.9678258747,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:VZ:US",
+                         "ticker":  "VZ",
+                         "name":  "VERIZON COMMUNICATIONS INC",
+                         "weight":  3.8629944198,
+                         "sector":  "Communication Services",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:PEP:US",
+                         "ticker":  "PEP",
+                         "name":  "PEPSICO INC",
+                         "weight":  3.769178869,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:COP:US",
+                         "ticker":  "COP",
+                         "name":  "CONOCOPHILLIPS",
+                         "weight":  3.7226156363,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:TXN:US",
+                         "ticker":  "TXN",
+                         "name":  "TEXAS INSTRUMENT INC",
+                         "weight":  3.4398949183,
+                         "sector":  "Information Technology",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:BMY:US",
+                         "ticker":  "BMY",
+                         "name":  "BRISTOL MYERS SQUIBB",
+                         "weight":  3.3825200733,
+                         "sector":  "Health Care",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:LMT:US",
+                         "ticker":  "LMT",
+                         "name":  "LOCKHEED MARTIN CORP",
+                         "weight":  2.9980362469,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:MO:US",
+                         "ticker":  "MO",
+                         "name":  "ALTRIA GROUP INC",
+                         "weight":  2.8938908378,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ADP:US",
+                         "ticker":  "ADP",
+                         "name":  "AUTOMATIC DATA PROCESSING INC",
+                         "weight":  2.7013800583,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ACN:US",
+                         "ticker":  "ACN",
+                         "name":  "ACCENTURE PLC CLASS A",
+                         "weight":  2.583354614,
+                         "sector":  "Information Technology",
+                         "country":  "IE"
+                     },
+                     {
+                         "identifier":  "TICKER:BX:US",
+                         "ticker":  "BX",
+                         "name":  "BLACKSTONE INC",
+                         "weight":  2.4069088262,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:QCOM:US",
+                         "ticker":  "QCOM",
+                         "name":  "QUALCOMM INC",
+                         "weight":  2.2727840409,
+                         "sector":  "Information Technology",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CMCSA:US",
+                         "ticker":  "CMCSA",
+                         "name":  "COMCAST CORP CLASS A",
+                         "weight":  2.1650281594,
+                         "sector":  "Communication Services",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:EOG:US",
+                         "ticker":  "EOG",
+                         "name":  "EOG RESOURCES INC",
+                         "weight":  2.008540335,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:UPS:US",
+                         "ticker":  "UPS",
+                         "name":  "UNITED PARCEL SERVICE INC CLASS B",
+                         "weight":  1.9732860743,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:SLB:US",
+                         "ticker":  "SLB",
+                         "name":  "SLB NV",
+                         "weight":  1.8803270766,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:TGT:US",
+                         "ticker":  "TGT",
+                         "name":  "TARGET CORP",
+                         "weight":  1.6643460268,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:F:US",
+                         "ticker":  "F",
+                         "name":  "FORD MOTOR",
+                         "weight":  1.4572008812,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:OKE:US",
+                         "ticker":  "OKE",
+                         "name":  "ONEOK INC",
+                         "weight":  1.4509927896,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:FAST:US",
+                         "ticker":  "FAST",
+                         "name":  "FASTENAL",
+                         "weight":  1.3891184004,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:DVN:US",
+                         "ticker":  "DVN",
+                         "name":  "DEVON ENERGY CORP",
+                         "weight":  1.319621104,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:FITB:US",
+                         "ticker":  "FITB",
+                         "name":  "FIFTH THIRD BANCORP",
+                         "weight":  1.298685823,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ADM:US",
+                         "ticker":  "ADM",
+                         "name":  "ARCHER DANIELS MIDLAND",
+                         "weight":  0.9688595478,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:PAYX:US",
+                         "ticker":  "PAYX",
+                         "name":  "PAYCHEX INC",
+                         "weight":  0.9554925476,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:KMB:US",
+                         "ticker":  "KMB",
+                         "name":  "KIMBERLY CLARK CORP",
+                         "weight":  0.9201889908,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CINF:US",
+                         "ticker":  "CINF",
+                         "name":  "CINCINNATI FINANCIAL CORP",
+                         "weight":  0.696965822,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ARES:US",
+                         "ticker":  "ARES",
+                         "name":  "ARES MANAGEMENT CORP CLASS A",
+                         "weight":  0.6851863001,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:RF:US",
+                         "ticker":  "RF",
+                         "name":  "REGIONS FINANCIAL CORP",
+                         "weight":  0.6698696528,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:HSY:US",
+                         "ticker":  "HSY",
+                         "name":  "HERSHEY FOODS",
+                         "weight":  0.6579149035,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:TROW:US",
+                         "ticker":  "TROW",
+                         "name":  "T ROWE PRICE GROUP INC",
+                         "weight":  0.6071805607,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:DRI:US",
+                         "ticker":  "DRI",
+                         "name":  "DARDEN RESTAURANTS INC",
+                         "weight":  0.591241538,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:PFG:US",
+                         "ticker":  "PFG",
+                         "name":  "PRINCIPAL FINANCIAL GROUP INC",
+                         "weight":  0.5668475468,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:SNA:US",
+                         "ticker":  "SNA",
+                         "name":  "SNAP ON INC",
+                         "weight":  0.5386650608,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:GIS:US",
+                         "ticker":  "GIS",
+                         "name":  "GENERAL MILLS INC",
+                         "weight":  0.4839903901,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:EWBC:US",
+                         "ticker":  "EWBC",
+                         "name":  "EAST WEST BANCORP INC",
+                         "weight":  0.4551277988,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:BR:US",
+                         "ticker":  "BR",
+                         "name":  "BROADRIDGE FINANCIAL SOLUTIONS INC",
+                         "weight":  0.4511151844,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:BBY:US",
+                         "ticker":  "BBY",
+                         "name":  "BEST BUY INC",
+                         "weight":  0.4285716108,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:DINO:US",
+                         "ticker":  "DINO",
+                         "name":  "HF SINCLAIR CORP",
+                         "weight":  0.3555486835,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:APA:US",
+                         "ticker":  "APA",
+                         "name":  "APA CORP",
+                         "weight":  0.3346631715,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:FNF:US",
+                         "ticker":  "FNF",
+                         "name":  "FIDELITY NATIONAL FINANCIAL INC",
+                         "weight":  0.3311351446,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:WSO:US",
+                         "ticker":  "WSO",
+                         "name":  "WATSCO INC",
+                         "weight":  0.2743919867,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:AFG:US",
+                         "ticker":  "AFG",
+                         "name":  "AMERICAN FINANCIAL GROUP INC",
+                         "weight":  0.2481062438,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ORI:US",
+                         "ticker":  "ORI",
+                         "name":  "OLD REPUBLIC INTERNATIONAL CORP",
+                         "weight":  0.2455849156,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:SWKS:US",
+                         "ticker":  "SWKS",
+                         "name":  "SKYWORKS SOLUTIONS INC",
+                         "weight":  0.2372854436,
+                         "sector":  "Information Technology",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:COLB:US",
+                         "ticker":  "COLB",
+                         "name":  "COLUMBIA BANKING SYSTEM INC",
+                         "weight":  0.2296609735,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ALV:US",
+                         "ticker":  "ALV",
+                         "name":  "AUTOLIV",
+                         "weight":  0.2150342571,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "SE"
+                     },
+                     {
+                         "identifier":  "TICKER:BAH:US",
+                         "ticker":  "BAH",
+                         "name":  "BOOZ ALLEN HAMILTON HOLDING CORP C",
+                         "weight":  0.2131676778,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:M:US",
+                         "ticker":  "M",
+                         "name":  "MACYS INC",
+                         "weight":  0.165999686,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ERIE:US",
+                         "ticker":  "ERIE",
+                         "name":  "ERIE INDEMNITY CLASS A",
+                         "weight":  0.1557837848,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:MSM:US",
+                         "ticker":  "MSM",
+                         "name":  "MSC INDUSTRIAL INC CLASS A",
+                         "weight":  0.1431130833,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:NXST:US",
+                         "ticker":  "NXST",
+                         "name":  "NEXSTAR MEDIA GROUP INC",
+                         "weight":  0.1388013274,
+                         "sector":  "Communication Services",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:MUR:US",
+                         "ticker":  "MUR",
+                         "name":  "MURPHY OIL CORP",
+                         "weight":  0.1355123237,
+                         "sector":  "Energy",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:MTN:US",
+                         "ticker":  "MTN",
+                         "name":  "VAIL RESORTS INC",
+                         "weight":  0.1352251022,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:OZK:US",
+                         "ticker":  "OZK",
+                         "name":  "BANK OZK",
+                         "weight":  0.1337441356,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:MC:US",
+                         "ticker":  "MC",
+                         "name":  "MOELIS CLASS A",
+                         "weight":  0.126358075,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:FHI:US",
+                         "ticker":  "FHI",
+                         "name":  "FEDERATED HERMES INC CLASS B",
+                         "weight":  0.1100772358,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:KFY:US",
+                         "ticker":  "KFY",
+                         "name":  "KORN FERRY",
+                         "weight":  0.1083198764,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:PAG:US",
+                         "ticker":  "PAG",
+                         "name":  "PENSKE AUTOMOTIVE GROUP VOTING INC",
+                         "weight":  0.1010563492,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CWEN:US",
+                         "ticker":  "CWEN",
+                         "name":  "CLEARWAY ENERGY INC CLASS C",
+                         "weight":  0.0974032931,
+                         "sector":  "Utilities",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:RHI:US",
+                         "ticker":  "RHI",
+                         "name":  "ROBERT HALF INC",
+                         "weight":  0.0960849127,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CVBF:US",
+                         "ticker":  "CVBF",
+                         "name":  "CVB FINANCIAL CORP",
+                         "weight":  0.0950306145,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:APAM:US",
+                         "ticker":  "APAM",
+                         "name":  "ARTISAN PARTNERS ASSET MANAGEMENT",
+                         "weight":  0.0706518506,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:BANR:US",
+                         "ticker":  "BANR",
+                         "name":  "BANNER CORP",
+                         "weight":  0.0605997445,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CNS:US",
+                         "ticker":  "CNS",
+                         "name":  "COHEN \u0026 STEERS INC",
+                         "weight":  0.057775334,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:IPAR:US",
+                         "ticker":  "IPAR",
+                         "name":  "INTERPARFUMS INC",
+                         "weight":  0.0574495489,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:OFG:US",
+                         "ticker":  "OFG",
+                         "name":  "OFG BANCORP",
+                         "weight":  0.0565438089,
+                         "sector":  "Financials",
+                         "country":  "PR"
+                     },
+                     {
+                         "identifier":  "TICKER:MZTI:US",
+                         "ticker":  "MZTI",
+                         "name":  "MARZETTI",
+                         "weight":  0.0548527061,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:AGM:US",
+                         "ticker":  "AGM",
+                         "name":  "FEDERAL AGRICULTURAL MORTGAGE NON",
+                         "weight":  0.0532669651,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CHCO:US",
+                         "ticker":  "CHCO",
+                         "name":  "CITY HOLDING",
+                         "weight":  0.0515945442,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:WU:US",
+                         "ticker":  "WU",
+                         "name":  "WESTERN UNION",
+                         "weight":  0.0502741625,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:NBHC:US",
+                         "ticker":  "NBHC",
+                         "name":  "NATIONAL BANK HOLDINGS CORP CLASS",
+                         "weight":  0.0489682361,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:GABC:US",
+                         "ticker":  "GABC",
+                         "name":  "GERMAN AMERICAN BANCORP INC",
+                         "weight":  0.0483666848,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:STBA:US",
+                         "ticker":  "STBA",
+                         "name":  "S AND T BANCORP INC",
+                         "weight":  0.0475600519,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:NSP:US",
+                         "ticker":  "NSP",
+                         "name":  "INSPERITY INC",
+                         "weight":  0.0464672683,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:SRCE:US",
+                         "ticker":  "SRCE",
+                         "name":  "1ST SOURCE CORP",
+                         "weight":  0.0409484677,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:LKFN:US",
+                         "ticker":  "LKFN",
+                         "name":  "LAKELAND FINANCIAL CORP",
+                         "weight":  0.0395062216,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:FLO:US",
+                         "ticker":  "FLO",
+                         "name":  "FLOWERS FOODS INC",
+                         "weight":  0.0376747236,
+                         "sector":  "Consumer Staples",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:BKE:US",
+                         "ticker":  "BKE",
+                         "name":  "BUCKLE INC",
+                         "weight":  0.0341757225,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:WEN:US",
+                         "ticker":  "WEN",
+                         "name":  "WENDYS",
+                         "weight":  0.0294511889,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:PFBC:US",
+                         "ticker":  "PFBC",
+                         "name":  "PREFERRED BANK",
+                         "weight":  0.0290059303,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CNA:US",
+                         "ticker":  "CNA",
+                         "name":  "CNA FINANCIAL CORP",
+                         "weight":  0.0288121247,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CPF:US",
+                         "ticker":  "CPF",
+                         "name":  "CENTRAL PACIFIC FINANCIAL CORP",
+                         "weight":  0.0258736472,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:VRTS:US",
+                         "ticker":  "VRTS",
+                         "name":  "VIRTUS INVESTMENT PARTNERS INC",
+                         "weight":  0.0254663814,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:THFF:US",
+                         "ticker":  "THFF",
+                         "name":  "FIRST FINANCIAL CORPORATION CORP",
+                         "weight":  0.0241534247,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:HAFC:US",
+                         "ticker":  "HAFC",
+                         "name":  "HANMI FINANCIAL CORP",
+                         "weight":  0.0237064052,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ORRF:US",
+                         "ticker":  "ORRF",
+                         "name":  "ORRSTOWN FINANCIAL SERVICES INC",
+                         "weight":  0.021260925,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:IBCP:US",
+                         "ticker":  "IBCP",
+                         "name":  "INDEPENDENT BANK CORP",
+                         "weight":  0.019872981,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:CCBG:US",
+                         "ticker":  "CCBG",
+                         "name":  "CAPITAL CITY BANK INC",
+                         "weight":  0.0181146556,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:EBF:US",
+                         "ticker":  "EBF",
+                         "name":  "ENNIS INC",
+                         "weight":  0.0141757721,
+                         "sector":  "Industrials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:AMSF:US",
+                         "ticker":  "AMSF",
+                         "name":  "AMERISAFE INC",
+                         "weight":  0.0135241754,
+                         "sector":  "Financials",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:OXM:US",
+                         "ticker":  "OXM",
+                         "name":  "OXFORD INDUSTRIES INC",
+                         "weight":  0.0133042715,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     },
+                     {
+                         "identifier":  "TICKER:ETD:US",
+                         "ticker":  "ETD",
+                         "name":  "ETHAN ALLEN INTERIORS INC",
+                         "weight":  0.0131577972,
+                         "sector":  "Consumer Discretionary",
+                         "country":  "US"
+                     }
+                 ]
+}

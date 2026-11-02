@@ -1,0 +1,14 @@
+﻿{
+    "comparison":  "SCHD vs VYMI",
+    "schdDataAsOf":  "2026-07-31",
+    "vymiDataAsOf":  "2026-07-31",
+    "validatedMatches":  0,
+    "directOverlapWeightSCHD":  0,
+    "directOverlapWeightVYMI":  0,
+    "method":  "Country-aware ticker matching plus normalized company-name cross-check",
+    "notes":  [
+                  "Ticker-only matches were excluded because tickers can be reused across countries.",
+                  "No validated direct company overlap was found in the 2026-07-31 snapshots.",
+                  "This is a static educational comparison, not a live portfolio analysis."
+              ]
+}

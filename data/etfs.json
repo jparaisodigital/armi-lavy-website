@@ -1,0 +1,8 @@
+﻿{
+  "dataset": "etf-screener",
+  "expectedCount": 342,
+  "dataAsOf": null,
+  "source": "",
+  "notes": "Static ETF screener dataset. Replace records only after the client-approved 342-ETF list and data fields are confirmed.",
+  "etfs": []
+}
