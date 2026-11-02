@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -37,6 +37,7 @@
   <script src="site.js?v=1" defer></script>
   <script src="calculator.js?v=1" defer></script>
   <script src="tools.js?v=1" defer></script>
+  <script src="overlap.js?v=1" defer></script>
   <script src="glossary.js?v=2" defer></script>
   <script src="backtotop.js?v=1" defer></script>
   <script src="reveal.js?v=1" defer></script>
@@ -194,6 +195,53 @@
       </div>
     </section>
 
+    <!-- TOOL #2: ETF OVERLAP -->
+    <section class="overlap-section section-pad" id="overlapTool">
+      <div class="tools-head">
+        <div class="section-kicker">TOOL #2 · ETF OVERLAP</div>
+        <h2>How much do SCHD and VYMI actually overlap?</h2>
+        <p>
+          Compare the two fixed ETF snapshots using country-aware matching.
+          Ticker-only matches are excluded when they refer to different companies.
+        </p>
+      </div>
+
+      <div class="tool-card overlap-card">
+        <div class="tool-label">SCHD VS VYMI</div>
+        <h3>Direct company overlap</h3>
+        <p class="tool-sub">
+          This static comparison uses manually prepared holdings data.
+        </p>
+
+        <div class="overlap-summary" id="overlapSummary"></div>
+
+        <div class="overlap-status" id="overlapStatus" aria-live="polite">
+          Loading comparison...
+        </div>
+
+        <div class="overlap-table-wrap">
+          <table class="overlap-table">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>SCHD</th>
+                <th>VYMI</th>
+                <th>SCHD weight</th>
+                <th>VYMI weight</th>
+              </tr>
+            </thead>
+            <tbody id="overlapTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="overlap-sources" id="overlapSources"></div>
+
+        <p class="tool-disclaimer">
+          Educational comparison only. Holdings and weights change over time.
+          This tool does not provide investment advice or a recommendation.
+        </p>
+      </div>
+    </section>
     <!-- MORE FREE TOOLS -->
     <section class="tools-section section-pad" id="tools">
       <div class="tools-head">
@@ -368,7 +416,7 @@
     </p>
   
     <div class="footer-bottom">
-      <span>© <span id="currentYear"></span> Armi L. Lavy</span>
+      <span>Â© <span id="currentYear"></span> Armi L. Lavy</span>
       <div>
         <a href="/#about">About</a>
         <a href="/#resources">Resources</a>

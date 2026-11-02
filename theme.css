@@ -923,3 +923,104 @@ html.reveal [data-reveal] {
       display: none;
     }
   }
+/* ===== ETF overlap tool ===== */
+.overlap-card {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.overlap-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.overlap-stat {
+  border: 1px solid var(--line, #d8e0dc);
+  background: #f5f7f5;
+  padding: 16px;
+}
+
+.overlap-stat span {
+  display: block;
+  color: var(--muted, #667078);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+}
+
+.overlap-stat strong {
+  display: block;
+  color: var(--ink, #273137);
+  font-size: 24px;
+  margin-top: 7px;
+}
+
+.overlap-status {
+  color: var(--muted, #667078);
+  font-size: 14px;
+  margin: 12px 0 16px;
+}
+
+.overlap-status[data-state="success"] {
+  color: #55715f;
+}
+
+.overlap-status[data-state="error"] {
+  color: #a33a2f;
+}
+
+.overlap-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line, #d8e0dc);
+}
+
+.overlap-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.overlap-table th,
+.overlap-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line, #d8e0dc);
+  text-align: left;
+}
+
+.overlap-table th {
+  background: #f5f7f5;
+  color: var(--muted, #667078);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.overlap-empty {
+  color: var(--muted, #667078);
+  text-align: center !important;
+  padding: 24px !important;
+}
+
+.overlap-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  color: var(--muted, #667078);
+  font-size: 12px;
+}
+
+.overlap-sources a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .overlap-summary {
+    grid-template-columns: 1fr;
+  }
+}
