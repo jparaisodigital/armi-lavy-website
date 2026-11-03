@@ -1,0 +1,521 @@
+1
+ETF Listing
+Low-Cost Core Products are in BOLD text.
+●  Options are available on these SPDR ETFs. Availability is subject to change 
+without notice.
+▲  Active Funds
+■  The gross expense ratios for these funds are as follows: CWI: 0.34; EFAX: 
+0.30; EMTL: 0.75; LOWC: 0.30; SL Y 0.15; SPMB: 0.07; SPYX: 0.25; STOT: 
+0.50; TFI: 0.30; TOTL: 0.65; XLC: 0.15; ZCAN: 0.20; ZDEU: 0.20; ZGBR: 0.20; 
+ZHOK: 0.20; and ZJPN: 0.20. The gross expense ratio is the fund’s total 
+annual operating expenses ratio. It is gross of any fee waivers or expense 
+reimbursements. It can be found in the fund’s most recent prospectus. These 
+funds have current fee agreements in place that reduce fund expenses and 
+if removed or modified will result in higher expense ratios and reduce fund 
+performance. Such contractual fee agreements are scheduled to expire on 
+the following dates: October 31, 2020 for EMTL, SPMB, SPYX, STOT, TFI,  
+and TOTL; January 31, 2021 for CWI, EFAX, LOWC, ZCAN, ZDEU, ZGBR, 
+ZHOK, and ZJPN; and January 31, 2022 for XLC.
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+US Equities 
+Core
+SPTM ● SPDR Portfolio S&P 1500 Composite 
+Stock Market
+0.03
+SPLG ● SPDR Portfolio S&P 500 0.03
+SPMD SPDR Portfolio S&P 400 Mid Cap 0.05
+SPSM ● SPDR Portfolio S&P 600 Small Cap 0.05
+SPY ● SPDR S&P 500 0.0945
+MDY ● SPDR S&P MidCap 400® 0.24
+S LY ■ SPDR S&P® 600 Small Cap 0.05
+DIA ● SPDR Dow Jones® Industrial Average 0.17
+SYE ▲ SPDR MFS Systematic Core Equity 0.60
+Style
+SPYG ● SPDR Portfolio S&P 500 Growth 0.04
+SPYV ● SPDR Portfolio S&P 500 Value 0.04
+MDYG SPDR S&P 400 Mid Cap Growth 0.15
+MDYV SPDR S&P 400 Mid Cap Value 0.15
+S LYG SPDR S&P 600 Small Cap Growth 0.15
+SL YV SPDR S&P 600 Small Cap Value 0.15
+SYG ▲ SPDR MFS Systematic Growth Equity 0.60
+SYV ▲ SPDR MFS Systematic Value Equity 0.60
+Sector
+XLC ● ■ Communication Services Select Sector SPDR 0.13
+XLP ● Consumer Staples Select Sector SPDR 0.13
+X LY ● Consumer Discretionary Select Sector SPDR 0.13
+XLE ● Energy Select Sector SPDR 0.13
+XLF ● Financial Select Sector SPDR 0.13
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+Low-Cost Core 
+US Equities
+SPTM ● SPDR Portfolio S&P 1500® Composite 
+Stock Market
+0.03
+SPLG ● SPDR Portfolio S&P 500® 0.03
+SPMD SPDR Portfolio S&P 400® Mid Cap 0.05
+SPSM ● SPDR Portfolio S&P 600® Small Cap 0.05
+SPYG ● SPDR Portfolio S&P 500 Growth 0.04
+SPYV ● SPDR Portfolio S&P 500 Value 0.04
+SPYD SPDR Portfolio S&P 500 High Dividend 0.07
+International Equities
+SPGM SPDR Portfolio MSCI Global Stock Market 0.09
+SPDW ● SPDR Portfolio Developed World ex-US 0.04
+SPEU ● SPDR Portfolio Europe 0.09
+SPEM ● SPDR Portfolio Emerging Markets 0.11
+Fixed Income
+SPAB SPDR Portfolio Aggregate Bond 0.04
+SPSB SPDR Portfolio Short T erm Corporate Bond 0.07
+SPIB SPDR Portfolio Intermediate T erm  
+Corporate Bond
+0.07
+SPLB SPDR Portfolio Long T erm Corporate Bond 0.07
+SPBO SPDR Portfolio Corporate Bond 0.06
+SPTS SPDR Portfolio Short T erm Treasury 0.06
+SPTI SPDR Portfolio Intermediate T erm Treasury 0.06
+SPTL SPDR Portfolio Long T erm Treasury 0.06
+SPMB ■ SPDR Portfolio Mortgage Backed Bond 0.06
+SPHY SPDR Portfolio High Yield Bond 0.15
+SPIP SPDR Portfolio TIPS 0.12
+January 24, 2020
+SPDR® Product Lineup
+2
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+International Equities
+Broad
+SPGM SPDR Portfolio MSCI Global Stock Market 0.09
+SPDW ● SPDR Portfolio Developed World ex-US 0.04
+CWI ● ■ SPDR MSCI ACWI ex-US 0.30
+DGT SPDR Global Dow 0.50
+GWX SPDR S&P International Small Cap 0.40
+Developed Region/Country
+SPEU ● SPDR Portfolio Europe 0.09
+FEZ ● SPDR EURO STOXX 50® 0.29
+SMEZ SPDR EURO STOXX Small Cap 0.46
+ZCAN ■ SPDR Solactive Canada 0.14
+ZDEU ■ SPDR Solactive Germany 0.14
+ZGBR ■ SPDR Solactive United Kingdom 0.14
+ZHOK ■ SPDR Solactive Hong Kong 0.14
+ZJPN ■ SPDR Solactive Japan 0.14
+Emerging Markets
+SPEM ● SPDR Portfolio Emerging Markets 0.11
+EWX ● SPDR S&P Emerging Markets Small Cap 0.65
+GXC ● SPDR S&P China 0.59
+GMF ● SPDR S&P Emerging Asia Pacific 0.49
+Smart Beta
+Income
+SPYD SPDR Portfolio S&P 500 High Dividend 0.07
+SDY ● SPDR S&P Dividend 0.35
+WDIV SPDR S&P Global Dividend 0.40
+DWX ● SPDR S&P International Dividend 0.45
+EDIV ● SPDR S&P Emerging Markets Dividend 0.49
+Multi-Factor: StrategicFactorsSM
+QUS SPDR MSCI USA StrategicFactors 0.15
+QWLD SPDR MSCI World StrategicFactors 0.30
+QEFA SPDR MSCI EAFE StrategicFactors 0.30
+QEMM SPDR MSCI Emerging Markets StrategicFactors 0.30
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+US Equities (cont’d)
+Sector (cont’d)
+X LV ● Health Care Select Sector SPDR 0.13
+XLI ● Industrial Select Sector SPDR 0.13
+XLB ● Materials Select Sector SPDR 0.13
+XLRE ● Real Estate Select Sector SPDR 0.13
+XLK ● T echnology Select Sector SPDR 0.13
+XLU ● Utilities Select Sector SPDR 0.13
+XLSR ▲ SPDR SSGA US Sector Rotation 0.70
+New Economies: 21st Century Sectors
+KOMP SPDR S&P Kensho New Economies Composite 0.20
+SIMS SPDR S&P Kensho Intelligent Structures 0.45
+HAIL SPDR S&P Kensho Smart Mobility 0.45
+FITE SPDR S&P Kensho Future Security 0.45
+ROKT SPDR S&P Kensho Final Frontiers 0.45
+CNRG SPDR S&P Kensho Clean Power 0.45
+Industry (Modified Equal Weighted)
+KBE ● SPDR S&P Bank 0.35
+KRE ● SPDR S&P Regional Banking 0.35
+KCE ● SPDR S&P Capital Markets 0.35
+KIE ● SPDR S&P Insurance 0.35
+XAR ● SPDR S&P Aerospace & Defense 0.35
+XTN SPDR S&P Transportation 0.35
+XBI ● SPDR S&P Biotech 0.35
+XPH ● SPDR S&P Pharmaceuticals 0.35
+XHE ● SPDR S&P Health Care Equipment 0.35
+XHS SPDR S&P Health Care Services 0.35
+XOP ● SPDR S&P Oil & Gas Exploration & Production 0.35
+XES ● SPDR S&P Oil & Gas Equipment & Services 0.35
+XME ● SPDR S&P Metals & Mining 0.35
+XRT ● SPDR S&P Retail 0.35
+XHB ● SPDR S&P Homebuilders 0.35
+XSD ● SPDR S&P Semiconductor 0.35
+XSW SPDR S&P Software & Services 0.35
+XNTK SPDR NYSE T echnology 0.35
+XITK SPDR FactSet Innovative T echnology 0.45
+XTL SPDR S&P T elecom 0.35
+XTH SPDR S&P T echnology Hardware 0.35
+XWEB SPDR S&P Internet 0.35
+3
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+Fixed Income (cont’d)
+US Investment Grade Corporates
+SPSB SPDR Portfolio Short T erm Corporate Bond 0.07
+SPIB SPDR Portfolio Intermediate T erm 
+Corporate Bond
+0.07
+SPLB SPDR Portfolio Long T erm Corporate Bond 0.07
+SPBO SPDR Portfolio Corporate Bond 0.06
+FLRN SPDR Bloomberg Barclays Investment Grade 
+Floating Rate
+0.15
+US Government
+SPTS SPDR Portfolio Short T erm Treasury 0.06
+SPTI SPDR Portfolio Intermediate T erm Treasury 0.06
+SPTL SPDR Portfolio Long T erm Treasury 0.06
+SPIP SPDR Portfolio TIPS 0.12
+TIPX SPDR Bloomberg Barclays 1–10 Year TIPS 0.15
+BIL ● SPDR Bloomberg Barclays 1–3 Month T -Bill 0.1359
+US Mortgage
+SPMB ■ SPDR Portfolio Mortgage Backed Bond 0.06
+Hybrids
+CWB ● SPDR Bloomberg Barclays Convertible 
+Securities
+0.40
+PSK SPDR Wells Fargo® Preferred Stock 0.45
+Municipal
+SHM SPDR Nuveen Bloomberg Barclays Short T erm 
+Municipal Bond
+0.20
+TFI ● ■ SPDR Nuveen Bloomberg Barclays 
+Municipal Bond
+0.23
+HYMB ● SPDR Nuveen Bloomberg Barclays High Yield 
+Municipal Bond
+0.35
+International
+EMTL ▲ ■ SPDR DoubleLine Emerging Markets 
+Fixed Income
+0.65
+EBND ● SPDR Bloomberg Barclays Emerging Markets 
+Local Bond
+0.30
+IBND SPDR Bloomberg Barclays International 
+Corporate Bond
+0.50
+BWZ SPDR Bloomberg Barclays Short T erm 
+InternationalTreasury Bond
+0.35
+BWX ● SPDR Bloomberg Barclays International 
+Treasury Bond
+0.35
+WIP SPDR FTSE International Government Inflation-
+Protected Bond
+0.50
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+Smart Beta (cont’d)
+Multi-Factor: Focus Factor
+ONEY SPDR Russell 1000 Yield Focus 0.20
+ONEV SPDR Russell 1000 Low Volatility Focus 0.20
+ONEO SPDR Russell 1000 Momentum Focus 0.20
+Single Factor
+SPYB SPDR S&P 500 Buyback 0.35
+LG LV SPDR SSGA US Large Cap Low Volatility Index 0.12
+SML V SPDR SSGA US Small Cap Low Volatility Index 0.12
+MMTM SPDR S&P 1500 Momentum Tilt 0.12
+VLU SPDR S&P 1500 Value Tilt 0.12
+Fixed Income
+DWFI SPDR Dorsey Wright® Fixed Income Allocation 0.60
+ESG
+LOWC ■ SPDR MSCI ACWI Low Carbon Target 0.20
+SPYX ■ SPDR S&P 500 Fossil Fuel Reserves Free 0.20
+EFAX ■ SPDR MSCI EAFE Fossil Fuel Reserves Free 0.20
+EEMX SPDR MSCI Emerging Markets Fossil Fuel 
+Reserves Free
+0.30
+SHE SPDR SSGA Gender Diversity Index 0.20
+Fixed Income 
+Multi-Sector
+SPAB SPDR Portfolio Aggregate Bond 0.04
+TOTL ▲ ■ SPDR DoubleLine® T otal Return Tactical 0.55
+STOT ▲ ■ SPDR DoubleLine Short Duration 
+T otal Return Tactical
+0.45
+ULST ▲ SPDR SSGA Ultra Short T erm Bond 0.20
+FISR ▲ SPDR SSGA Fixed Income Sector Rotation 0.50
+High Yield/Senior Loans
+SPHY SPDR Portfolio High Yield Bond 0.15
+SRLN ▲ SPDR Blackstone / GSO Senior Loan 0.70
+SJNK ● SPDR Bloomberg Barclays Short T erm 
+High Yield Bond
+0.40
+JNK ● SPDR Bloomberg Barclays High Yield Bond 0.40
+Prior to 01/24/2020, the SPDR Portfolio S&P 1500 Composite Stock Market ETF (SPTM) was known as the SPDR Portfolio Total Stock Market ETF, the SPDR Portfolio  
+S&P 500 ETF (SPLG) was known as the SPDR Portfolio Large Cap ETF, the SPDR Portfolio S&P 400 Mid Cap ETF (SPMD) was known as the SPDR Portfolio Mid Cap 
+ETF and the SPDR Portfolio S&P 600 Small Cap ETF (SPSM) was known as the SPDR Portfolio Small Cap ETF.
+4
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+Asset Allocation
+GAL ▲ SPDR SSGA Global Allocation 0.35
+INKM ▲ SPDR SSGA Income Allocation 0.50
+R LY ▲ SPDR SSGA Multi-Asset Real Return 0.50
+Ticker Fund Name Net  
+Expense 
+Ratio (%)
+Commodity/Real Assets
+GLD® ● SPDR Gold Shares 0.40
+GLDMSM SPDR Gold MiniSharesSM 0.18
+GII SPDR S&P Global Infrastructure 0.40
+GNR ● SPDR S&P Global Natural Resources 0.40
+NANR SPDR S&P North American Natural Resources 0.35
+RWR ● SPDR Dow Jones REIT 0.25
+RWO ● SPDR Dow Jones Global Real Estate 0.50
+RWX ● SPDR Dow Jones International Real Estate 0.59
+Low-Cost Core Products are in BOLD text.
+●  Options are available on these SPDR ETFs. Availability is subject to change 
+without notice.
+▲  Active Funds
+■  The gross expense ratios for these funds are as follows: CWI: 0.34; EFAX: 
+0.30; EMTL: 0.75; LOWC: 0.30; SL Y 0.15; SPMB: 0.07; SPYX: 0.25; STOT: 
+0.50; TFI: 0.30; TOTL: 0.65; XLC: 0.15; ZCAN: 0.20; ZDEU: 0.20; ZGBR: 0.20; 
+ZHOK: 0.20; and ZJPN: 0.20. The gross expense ratio is the fund’s total 
+annual operating expenses ratio. It is gross of any fee waivers or expense 
+reimbursements. It can be found in the fund’s most recent prospectus. These 
+funds have current fee agreements in place that reduce fund expenses and 
+if removed or modified will result in higher expense ratios and reduce fund 
+performance. Such contractual fee agreements are scheduled to expire on 
+the following dates: October 31, 2020 for EMTL, SPMB, SPYX, STOT, TFI, and 
+TOTL; January 31, 2021 for CWI, EFAX, LOWC, ZCAN, ZDEU, ZGBR, ZHOK, 
+and ZJPN; and January 31, 2022 for XLC.
+5
+ssga.com 
+spdrs.com 
+Important Risk Information 
+State Street Global Advisors and its 
+affiliates have not taken into consideration 
+the circumstances of any particular 
+investor in producing this material 
+and are not making an investment 
+recommendation or acting in fiduciary 
+capacity in connection with the provision 
+of the information contained herein. 
+ETFs trade like stocks, are subject to 
+investment risk, fluctuate in market value and 
+may trade at prices above or below the ETFs’ 
+net asset value. Brokerage commissions and 
+ETF expenses will reduce returns. 
+Frequent trading of ETFs could significantly 
+increase commissions and other costs such 
+that they may offset any savings from low fees 
+or costs. 
+Diversification does not ensure a profit or 
+guarantee against loss.
+Investing involves risk, and you could lose 
+money on an investment in each of SPDR® 
+Gold Shares Trust (“GLD®”) and SPDR® Gold 
+MiniSharesSM Trust (“GLDMSM”), a series of the 
+World Gold Trust (together, the “Funds”).
+Investing in commodities entails 
+significant risk and is not appropriate 
+for all investors. Important Information 
+Relating to SPDR® Gold Trust (“GLD®”)  
+and SPDR® Gold MiniSharesSM Trust 
+(“GLDMSM”): The SPDR Gold Trust (“GLD”) 
+and the World Gold Trust have each filed a 
+registration statement (including a 
+prospectus) with the Securities and 
+Exchange Commission (“SEC”) for GLD and 
+GLDM, respectively. Before you invest, you 
+should read the prospectus in the 
+registration statement and other 
+documents each Fund has filed with the 
+SEC for more complete information about 
+each Fund and these offerings. Please 
+see each Fund’s prospectus for a more 
+detailed discussion of the risks of investing 
+in each Fund’s shares. When distributed 
+electronically, the GLD prospectus is 
+available by clicking here and the GLDM 
+prospectus is available by clicking here. 
+You may get these documents for free by 
+visiting EDGAR on the SEC website at sec.
+gov or by visiting spdrgoldshares.com. 
+Alternatively, the Funds or any authorized 
+participant will arrange to send you the 
+prospectus if you request it by 
+calling 866.320.4053. 
+None of the Funds is an investment company 
+registered under the Investment Company 
+Act of 1940 (the “1940 Act”). As a result, 
+shareholders of each Fund do not have the 
+protections associated with ownership of 
+shares in an investment company registered 
+under the 1940 Act. GLD and GLDM are not 
+subject to regulation under the CEA. As a result, 
+shareholders of GLD and GLDM do not have the 
+protections afforded by the CEA. Shares of each 
+Fund trade like stocks, are subject to 
+investment risk and will fluctuate in market 
+value. The values of GLD shares and GLDM 
+shares relate directly to the value of the gold 
+held by each Fund (less its expenses), 
+respectively. Fluctuations in the price of gold 
+could materially and adversely affect an 
+investment in the shares. The price received 
+upon the sale of the shares, which trade at 
+market price, may be more or less than the 
+value of the gold represented by them. 
+None of the Funds generate any income, and as 
+each Fund regularly sells gold to pay for its 
+ongoing expenses, the amount of gold 
+represented by each Fund share will decline 
+over time to that extent. The World Gold Council 
+name and logo are a registered trademark and 
+used with the permission of the World Gold 
+Council pursuant to a license agreement. The 
+World Gold Council is not responsible for the 
+content of, and is not liable for the use of or 
+reliance on, this material. World Gold Council is 
+an affiliate of the Sponsor of each of GLD and 
+GLDM. GLD® is a registered trademark of World 
+Gold Trust Services, LLC used with the 
+permission of World Gold Trust Services, LLC. 
+MiniSharesSM and GLDMSM are service marks of 
+WGC USA Asset Management Company, LLC 
+used with the permission of WGC USA Asset 
+Management Company, LLC. 
+For more information, please contact the 
+Marketing Agent for GLD and GLDM: State 
+Street Global Advisors Funds Distributors, 
+LLC, One Iron Street, Boston, MA 02210 T: 
++1 866 320 4053 spdrgoldshares.com. 
+Intellectual Property Information: Standard 
+& Poor’s®, S&P® and SPDR® are registered 
+trademarks of Standard & Poor’s Financial 
+Services LLC, a division of S&P Global (“S&P”); 
+Dow Jones is a registered trademark of Dow 
+Jones Trademark Holdings LLC (Dow Jones); 
+and these trademarks have been licensed for 
+use by S&P Dow Jones Indices LLC (SPDJI) and 
+sublicensed for certain purposes by State 
+Street Corporation. State Street Corporation’s 
+financial products are not sponsored, endorsed, 
+sold or promoted by SPDJI, Dow Jones, S&P, 
+their respective affiliates and third party 
+licensors and none of such parties make any 
+representation regarding the advisability of 
+investing in such product(s) nor do they have 
+any liability in relation thereto. The trademarks 
+and service marks referenced herein are the 
+property of their respective owners. Third 
+party data providers make no warranties or 
+representations of any kind relating to the 
+accuracy, completeness or timeliness of the 
+data and have no liability for damages of 
+any kind relating to the use of such data. 
+DoubleLine® is a registered trademark of 
+DoubleLine Capital LP. 
+BLOOMBERG®, a trademark and service mark 
+of Bloomberg Finance L.P. and its affiliates, and 
+BARCLAYS®, a trademark and service mark of 
+Barclays Bank Plc, have each been licensed for 
+use in connection with the listing and trading 
+of the SPDR Bloomberg Barclays ETFs. There 
+is no relationship between Dorsey Wright & 
+Associates, LLC (collectively with its parent 
+companies and affiliates, “Dorsey Wright”) and 
+State Street Global Advisors (“SSGA”) other 
+than a license by Dorsey Wright to SSGA of 
+certain Dorsey Wright trademarks and trade 
+names, and the Dorsey Wright Fixed Income 
+Rotation Index (“Index”), for use by SSGA.
+KENSHO© is a registered service mark of 
+Kensho Technologies Inc. (“Kensho”), and all 
+Kensho financial indices in the Kensho New 
+Economies© family (the “Kensho Indices”) and 
+the Kensho Indices corresponding service 
+marks have been licensed by SSGA Funds 
+Management, Inc. (“SSGA FM”) in connection 
+with the SPDR S&P Kensho Intelligent 
+Structures ETF, SPDR S&P Kensho Smart 
+Mobility ETF, SPDR S&P Kensho Future 
+Security ETF, SPDR S&P Kensho Clean Power 
+ETF, SPDR S&P Kensho Final Frontiers ETF and 
+SPDR S&P Kensho New Economies Composite 
+ETF (collectively, the “SPDR S&P Kensho ETFs”). 
+The SPDR S&P Kensho ETFs are not marketed, 
+sold, or sponsored by Kensho, Kensho’s 
+affiliates, or Kensho’s third party licensors. 
+For disclaimer information, please visit: 
+https://indices.kensho.com/disclaimers. 
+London Stock Exchange Group plc and its 
+group undertakings (collectively, the “LSE 
+Group”). © LSE Group 2019. FTSE Russell is 
+a trading name of certain of the LSE Group 
+companies. “FTSE®” is a trade mark of the 
+relevant LSE Group companies and is used by 
+any other LSE Group company under license. 
+All rights in the FTSE Russell indexes or data 
+vest in the relevant LSE Group company which 
+owns the index or the data. Neither LSE Group 
+nor its licensors accept any liability for any 
+errors or omissions in the indexes or data and 
+no party may rely on any indexes or data 
+contained in this communication. No further 
+distribution of data from the LSE Group is 
+permitted without the relevant LSE Group 
+company’s express written consent. The LSE 
+Group does not promote, sponsor or endorse 
+the content of this communication.
+Distributor State Street Global Advisors Funds 
+Distributors, LLC, member FINRA, SIPC, an 
+indirect wholly owned subsidiary of State Street 
+Corporation. References to State Street may 
+include State Street Corporation and its 
+affiliates. Certain State Street affiliates provide 
+services and receive fees from the SPDR ETFs. 
+ALPS Distributors, Inc., member FINRA, is 
+distributor for SPDR S&P 500, SPDR S&P 
+MidCap 400 and SPDR Dow Jones Industrial 
+Average, all unit investment trusts. ALPS 
+Portfolio Solutions Distributor, Inc., member 
+FINRA, is distributor for Select Sector SPDRs. 
+ALPS Distributors, Inc. and ALPS Portfolio 
+Solutions Distributor, Inc. are not affiliated with 
+State Street Global Advisors Funds Distributors, 
+LLC. State Street Global Advisors Funds 
+Distributors, LLC is the distributor for certain 
+registered products on behalf of the advisor. 
+SSGA Funds Management has retained GSO 
+Capital Partners, Nuveen Asset Management, 
+MFS, and DoubleLine Capital LP as the 
+sub-advisor. GSO Capital Partners, Nuveen 
+Asset Management, MFS, and DoubleLine 
+Capital LP are not affiliated with State Street 
+Global Advisors Funds Distributors, LLC. 
+Before investing, consider the 
+funds’ investment objectives, 
+risks, charges and expenses. To 
+obtain a prospectus or summary  
+prospectus which contains 
+this and other information, call 
+866.787.2257 or visit spdrs.com. 
+Read it carefully.
+© 2020 State Street Corporation. 
+All Rights Reserved.  
+ID126011-2171656.8.1.AM.RTL  1219 
+Exp. Date: 01/31/2021 SPD002088
+Not FDIC Insured
+No Bank Guarantee
+May Lose Value

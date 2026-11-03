@@ -38,6 +38,8 @@
   <script src="calculator.js?v=1" defer></script>
   <script src="tools.js?v=1" defer></script>
   <script src="overlap.js?v=1" defer></script>
+  <script src="screener.js?v=1" defer></script>
+  <script src="backtester.js?v=1" defer></script>
   <script src="glossary.js?v=2" defer></script>
   <script src="backtotop.js?v=1" defer></script>
   <script src="reveal.js?v=1" defer></script>
@@ -242,6 +244,75 @@
         </p>
       </div>
     </section>
+    <!-- TOOL 4: ETF SCREENER -->
+    <section class="screener-section section-pad" id="screenerTool">
+      <div class="tools-head">
+        <div class="section-kicker">TOOL #4 · ETF SCREENER</div>
+        <h2>Browse the fixed ETF universe.</h2>
+        <p>Search the static 342-ETF snapshot by ticker, fund name, or issuer.</p>
+      </div>
+
+      <div class="screener-card">
+        <div class="screener-controls">
+          <label>
+            Search ETFs
+            <input id="screenerSearch" type="search" placeholder="Ticker or fund name" autocomplete="off" />
+          </label>
+          <label>
+            Issuer
+            <select id="screenerIssuer">
+              <option value="">All issuers</option>
+            </select>
+          </label>
+        </div>
+        <div class="screener-meta" id="screenerMeta">Loading static ETF data…</div>
+        <div class="screener-table-wrap">
+          <table class="screener-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Fund</th>
+                <th>Issuer</th>
+                <th>Category</th>
+                <th>Expense ratio</th>
+                <th>Yield</th>
+              </tr>
+            </thead>
+            <tbody id="screenerRows"></tbody>
+          </table>
+        </div>
+        <p class="tool-disclaimer">Static educational snapshot. Some issuer metrics are unavailable in the current source snapshot and are shown as N/A.</p>
+      </div>
+    </section>
+
+    <!-- TOOL 5: BACKTESTER -->
+    <section class="backtester-section section-pad" id="backtesterTool">
+      <div class="tools-head">
+        <div class="section-kicker">TOOL #5 · BACKTESTER</div>
+        <h2>How did these ETFs grow over the same period?</h2>
+        <p>Compare SCHD, JEPI, VYMI, and VOO using monthly static return snapshots.</p>
+      </div>
+
+      <div class="backtester-card">
+        <div class="backtester-controls">
+          <label>
+            Starting amount
+            <input id="backtestAmount" type="number" min="1" step="100" value="10000" />
+          </label>
+          <div class="backtester-range" id="backtestRange">Loading data range…</div>
+          <button class="button button-dark" id="backtestRun" type="button">Run comparison</button>
+        </div>
+        <div class="backtester-chart" id="backtestChart" aria-live="polite"></div>
+        <div class="backtester-table-wrap">
+          <table class="backtester-table">
+            <thead><tr><th>Fund</th><th>Ending value</th><th>Total return</th><th>Data points</th></tr></thead>
+            <tbody id="backtestRows"></tbody>
+          </table>
+        </div>
+        <p class="tool-disclaimer">Static educational comparison. Values use monthly adjusted-close data as a total-return proxy with no contributions, taxes, or fees beyond the source series.</p>
+      </div>
+    </section>
+
     <!-- MORE FREE TOOLS -->
     <section class="tools-section section-pad" id="tools">
       <div class="tools-head">
