@@ -1,6 +1,10 @@
 ﻿# Screener Universe Rules
 
-Target: 342 U.S.-listed ETFs
+Target: 339 core U.S.-listed ETFs
+
+Universe note:
+- Based on the client-provided 342-record list.
+- TBT, TMF, and TMV are excluded because they are leveraged/inverse tactical ETFs.
 
 Include:
 - Regular unlevered ETFs
@@ -22,4 +26,4 @@ Data rules:
 - Keep ticker, fund name, issuer, category, yield, expense ratio, AUM, data-as-of date, and source URL
 - Use null when an official metric is unavailable
 - Do not estimate or invent missing values
-- Keep the final universe fixed at 342 records
+- Keep the final core universe fixed at 339 records

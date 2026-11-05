@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#232625" />
+  <meta name="description" content="ETF tool disclosures, data sources, and methodology for Armi L. Lavy." />
+  <title>Disclosures & Methodology | Armi L. Lavy</title>
+  <link rel="canonical" href="https://www.armilavyfinance.com/disclosures" />
+  <link rel="icon" type="image/png" href="/assets/fav.png" />
+  <link rel="apple-touch-icon" href="/assets/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="theme.css?v=2" />
+  <script src="config.js?v=2" defer></script>
+  <script src="site.js?v=1" defer></script>
+  <script src="backtotop.js?v=1" defer></script>
+  <script src="reveal.js?v=1" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Armi Lavy home">
+      <span class="brand-mark">AL</span>
+      <span class="brand-name">ARMI L. LAVY</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="25" height="25" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="/#about">About</a>
+      <a href="/#resources">Resources</a>
+      <a href="tools.html">Tools</a>
+      <a href="learn.html">Learn</a>
+      <a href="/#insights">Insights</a>
+      <a class="nav-cta" href="/#resources">Explore the Guide</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="section-kicker light-eyebrow">ETF TOOLS</div>
+        <h1>Disclosures &amp; Methodology</h1>
+        <p>How the static ETF tools are sourced, dated, and calculated.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" style="max-width: 720px; margin: 0 auto;">
+      <div class="section-kicker">LAST UPDATED</div>
+      <p style="margin-top: 8px; color: var(--muted);">November 2026</p>
+
+      <h2 style="margin-top: 48px;">Educational use</h2>
+      <p>These tools are for education and general information only. They are not personalized advice, a recommendation, or an offer to buy or sell any security. Results do not guarantee future performance, income, or outcomes.</p>
+
+      <h2 style="margin-top: 48px;">Screener</h2>
+      <p>The screener uses a fixed client-approved snapshot of 339 ETF records. Official issuer pages and issuer product lists are the primary sources. When an issuer does not publish a metric in the captured source, the field is shown as N/A rather than estimated.</p>
+      <p>The screener may show source dates and status labels such as closed, legacy, excluded ETN, or unverified. These labels are intended to make the snapshot transparent and do not represent a current investment recommendation.</p>
+
+      <h2 style="margin-top: 48px;">Overlap</h2>
+      <p>The SCHD versus VYMI overlap tool compares manually prepared holdings snapshots dated July 31, 2026. It uses country-aware ticker matching and normalized company-name cross-checking. Holdings and weights can change over time, and the result may differ from a live portfolio analysis.</p>
+
+      <h2 style="margin-top: 48px;">Backtester</h2>
+      <p>The backtester compares SCHD, JEPI, VYMI, and VOO using monthly static price observations. Observations are aligned by calendar month. Adjusted-close prices are used as a total-return proxy, not official total-return series.</p>
+      <p>The illustration assumes a starting amount and, where selected, a fixed monthly contribution. It does not model taxes, trading costs, bid-ask spreads, slippage, fund-specific distributions, investor behavior, or future contributions beyond the selected input. Results are hypothetical and do not represent an actual managed account.</p>
+
+      <h2 style="margin-top: 48px;">Primary source websites</h2>
+      <ul style="padding-left: 20px; color: var(--muted); line-height: 1.8;">
+        <li><a class="text-link dark-link" href="https://investor.vanguard.com/investment-products/list/etfs" target="_blank" rel="noopener">Vanguard ETF list</a></li>
+        <li><a class="text-link dark-link" href="https://www.schwabassetmanagement.com/products/schd" target="_blank" rel="noopener">Schwab Asset Management SCHD page</a></li>
+        <li><a class="text-link dark-link" href="https://am.jpmorgan.com/us/en/asset-management/adv/products/jpmorgan-equity-premium-income-etf-46641q332" target="_blank" rel="noopener">J.P. Morgan Asset Management JEPI page</a></li>
+        <li><a class="text-link dark-link" href="https://www.ishares.com/us/literature/brochure/ishares-product-list-en-us.pdf" target="_blank" rel="noopener">iShares / BlackRock product list</a></li>
+        <li><a class="text-link dark-link" href="https://www.ssga.com/library-content/pdfs/etf/us/spdr-etf-listing.pdf" target="_blank" rel="noopener">State Street SPDR ETF listing</a></li>
+      </ul>
+      <p>Exchange listings may be used only to confirm that a ticker exists and is listed. They are not used as the primary source for issuer yield or expense-ratio metrics. Third-party sites are not used as the primary screener dataset.</p>
+
+      <h2 style="margin-top: 48px;">Data updates</h2>
+      <p>This is a manually updated static snapshot. Source dates are preserved with the relevant dataset, and the data may become outdated as issuers change holdings, fees, yields, fund names, or fund status.</p>
+
+      <p style="margin-top: 48px; font-size: 15px; color: var(--muted);">This page describes the current website implementation and is not a legal or regulatory opinion. The site owner should have the final disclosures reviewed by qualified U.S. counsel or compliance personnel.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>&copy; <span id="currentYear"></span> Armi L. Lavy</span>
+      <div>
+        <a href="tools.html">Tools</a>
+        <a href="learn.html">Learn</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosures.html">Disclosures</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

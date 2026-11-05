@@ -3,7 +3,7 @@ const SITE_CONFIG = {
     name: "Armi L. Lavy",
     initials: "AL",
     tagline: "A more confident relationship with money.",
-    email: "",
+    email: "Armilavy1986@yahoo.com",
     gumroadProfile: "https://armilavy.gumroad.com"
   },
 

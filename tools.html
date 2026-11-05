@@ -32,13 +32,13 @@
 
   <!-- Styles & Scripts -->
   <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="theme.css?v=1" />
+  <link rel="stylesheet" href="theme.css?v=2" />
   <script src="config.js?v=2" defer></script>
   <script src="site.js?v=1" defer></script>
   <script src="calculator.js?v=1" defer></script>
   <script src="tools.js?v=1" defer></script>
   <script src="overlap.js?v=1" defer></script>
-  <script src="screener.js?v=1" defer></script>
+  <script src="screener.js?v=2" defer></script>
   <script src="backtester.js?v=1" defer></script>
   <script src="glossary.js?v=2" defer></script>
   <script src="backtotop.js?v=1" defer></script>
@@ -71,14 +71,6 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <div class="page-hero-inner">
-        <div class="section-kicker light-eyebrow">FREE TOOLS</div>
-        <h1>Run the numbers. Check the company.</h1>
-        <p>Three simple tools to help you estimate dividend income, set a realistic goal, and see what makes a dividend worth a closer look. No sign-up needed.</p>
-      </div>
-    </section>
-
     <!-- DIVIDEND CALCULATOR -->
     <section class="calculator-section section-pad" id="calculator">
       <div class="calculator-intro">
@@ -197,10 +189,10 @@
       </div>
     </section>
 
-    <!-- TOOL #2: ETF OVERLAP -->
+    <!-- ETF OVERLAP -->
     <section class="overlap-section section-pad" id="overlapTool">
       <div class="tools-head">
-        <div class="section-kicker">TOOL #2 · ETF OVERLAP</div>
+        <div class="section-kicker">ETF OVERLAP</div>
         <h2>How much do SCHD and VYMI actually overlap?</h2>
         <p>
           Compare the two fixed ETF snapshots using country-aware matching.
@@ -220,6 +212,10 @@
         <div class="overlap-status" id="overlapStatus" aria-live="polite">
           Loading comparison...
         </div>
+
+        <p class="overlap-interpretation">
+          What this suggests: SCHD and VYMI provide different geographic exposure—SCHD focuses on U.S. companies, while VYMI focuses on international companies. In these snapshots, no direct shared company holdings were validated.
+        </p>
 
         <div class="overlap-table-wrap">
           <table class="overlap-table">
@@ -244,12 +240,12 @@
         </p>
       </div>
     </section>
-    <!-- TOOL 4: ETF SCREENER -->
+    <!-- ETF SCREENER -->
     <section class="screener-section section-pad" id="screenerTool">
       <div class="tools-head">
-        <div class="section-kicker">TOOL #4 · ETF SCREENER</div>
+        <div class="section-kicker">ETF SCREENER</div>
         <h2>Browse the fixed ETF universe.</h2>
-        <p>Search the static 342-ETF snapshot by ticker, fund name, or issuer.</p>
+        <p>Search the static 339-ETF client snapshot by ticker, fund name, or issuer.</p>
       </div>
 
       <div class="screener-card">
@@ -264,8 +260,27 @@
               <option value="">All issuers</option>
             </select>
           </label>
+          <label>
+            Category
+            <select id="screenerCategory">
+              <option value="">All categories</option>
+            </select>
+          </label>
+          <label>
+            Sort by
+            <select id="screenerSort">
+              <option value="ticker">Ticker</option>
+              <option value="name">Fund name</option>
+              <option value="expenseAsc">Expense ratio: low to high</option>
+              <option value="expenseDesc">Expense ratio: high to low</option>
+            </select>
+          </label>
+          <button class="button button-light screener-reset" id="screenerReset" type="button">Reset filters</button>
         </div>
         <div class="screener-meta" id="screenerMeta">Loading static ETF data…</div>
+        <p class="screener-scroll-hint" aria-live="polite">
+          Tip: Rotate your phone for the full table · Scroll inside to browse · Swipe sideways for more columns
+        </p>
         <div class="screener-table-wrap">
           <table class="screener-table">
             <thead>
@@ -276,19 +291,21 @@
                 <th>Category</th>
                 <th>Expense ratio</th>
                 <th>Yield</th>
+                <th>AUM</th>
+                <th>Data as of</th>
               </tr>
             </thead>
             <tbody id="screenerRows"></tbody>
           </table>
         </div>
-        <p class="tool-disclaimer">Static educational snapshot. Some issuer metrics are unavailable in the current source snapshot and are shown as N/A.</p>
+        <p class="tool-disclaimer">Static educational snapshot. N/A means the issuer did not publish that metric in the captured source. Status labels identify closed, legacy, excluded ETN, or unverified entries.</p>
       </div>
     </section>
 
-    <!-- TOOL 5: BACKTESTER -->
+    <!-- ETF BACKTESTER -->
     <section class="backtester-section section-pad" id="backtesterTool">
       <div class="tools-head">
-        <div class="section-kicker">TOOL #5 · BACKTESTER</div>
+        <div class="section-kicker">ETF BACKTESTER</div>
         <h2>How did these ETFs grow over the same period?</h2>
         <p>Compare SCHD, JEPI, VYMI, and VOO using monthly static return snapshots.</p>
       </div>
@@ -298,6 +315,19 @@
           <label>
             Starting amount
             <input id="backtestAmount" type="number" min="1" step="100" value="10000" />
+          </label>
+          <label>
+            Monthly contribution
+            <input id="backtestContribution" type="number" min="0" step="100" value="0" />
+          </label>
+          <label>
+            Date range
+            <select id="backtestDateRange">
+              <option value="all">All shared history</option>
+              <option value="60">Last 5 years</option>
+              <option value="36">Last 3 years</option>
+              <option value="12">Last 1 year</option>
+            </select>
           </label>
           <div class="backtester-range" id="backtestRange">Loading data range…</div>
           <button class="button button-dark" id="backtestRun" type="button">Run comparison</button>
@@ -309,7 +339,7 @@
             <tbody id="backtestRows"></tbody>
           </table>
         </div>
-        <p class="tool-disclaimer">Static educational comparison. Values use monthly adjusted-close data as a total-return proxy with no contributions, taxes, or fees beyond the source series.</p>
+        <p class="tool-disclaimer">Static educational comparison. Monthly observations are aligned by calendar month. Source observation dates may differ slightly by fund. Adjusted-close prices are used as a total-return proxy, with no contributions, taxes, or fees beyond the source series.</p>
       </div>
     </section>
 
@@ -487,14 +517,13 @@
     </p>
   
     <div class="footer-bottom">
-      <span>Â© <span id="currentYear"></span> Armi L. Lavy</span>
+      <span>&copy; <span id="currentYear"></span> Armi L. Lavy</span>
       <div>
-        <a href="/#about">About</a>
-        <a href="/#resources">Resources</a>
         <a href="tools.html">Tools</a>
         <a href="learn.html">Learn</a>
-        <a href="/#insights">Insights</a>
         <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosures.html">Disclosures</a>
       </div>
     </div>
   </footer>

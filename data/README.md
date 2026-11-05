@@ -21,7 +21,7 @@ data/
 
 ## `etfs.json`
 
-Fixed screener universe of 342 ETFs.
+Fixed screener universe of 339 core ETFs, derived from the client's 342-record list after excluding TBT, TMF, and TMV.
 
 Required record fields:
 
@@ -83,4 +83,4 @@ The selected value must be documented as either total-return data or price-retur
 
 ## Current status
 
-The folder defines the data contract only. The actual ETF datasets will be added after the client-approved 342-ETF list, holdings source, historical-data source, and backtesting assumptions are confirmed.
+The folder defines the data contract and preserves the client-provided source list. The live core dataset contains 339 ETFs after the approved exclusions; holdings and price datasets remain separate static snapshots.

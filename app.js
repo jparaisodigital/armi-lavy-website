@@ -642,7 +642,9 @@ loadNews();
   const link = document.getElementById("footerEmail");
   if (!item || !link) return;
   link.href = "mailto:" + email;
-  link.textContent = email;
+  const textEl = document.getElementById("footerEmailText");
+  if (textEl) textEl.textContent = "Email us";
+  else link.textContent = "Email us";
   item.hidden = false;
 })();
 

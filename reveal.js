@@ -24,6 +24,7 @@
   
       ["#featuredProduct", "zoom"],
       ["#productGrid", "up"],
+      [".featured-tool-card", "zoom"],
   
       [".calculator-intro", "left"],
       [".calculator-card", "right"],

@@ -38,7 +38,7 @@
 
   <!-- Styles & Scripts -->
   <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="theme.css?v=1" />
+  <link rel="stylesheet" href="theme.css?v=2" />
   <script src="config.js?v=2" defer></script>
   <script src="app.js?v=2" defer></script>
   <script src="reveal.js?v=1" defer></script>
@@ -139,8 +139,8 @@
         </p>
 
         <div class="hero-actions">
-          <a class="button button-light" href="#resources">
-            Explore the Resources
+          <a class="button button-light" href="#featured-tools">
+            Explore the Tools
           </a>
           <a class="text-link light-link" href="#about">
             Get to know Armi
@@ -274,26 +274,51 @@
       </div>
     </section>
 
-        <!-- TOOLS + LEARN TEASERS -->
+    <!-- FEATURED ETF TOOLS -->
+    <section class="featured-tools section-pad" id="featured-tools">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">FEATURED TOOLS</div>
+          <h2>Make the next step clearer.</h2>
+          <p class="section-description">
+            Explore simple, static tools built to help you compare, research, and understand ETFs.
+          </p>
+        </div>
+        <a class="text-link dark-link" href="tools.html">View all tools</a>
+      </div>
+
+      <div class="featured-tools-grid">
+        <a class="featured-tool-card featured-tool-card-dark" href="tools.html#overlapTool">
+          <span class="teaser-label">ETF OVERLAP</span>
+          <h3>Compare what you actually own.</h3>
+          <p>See how SCHD and VYMI overlap using a fixed holdings snapshot.</p>
+          <span class="teaser-cta">Explore overlap <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="featured-tool-card featured-tool-card-light" href="tools.html#screenerTool">
+          <span class="teaser-label">ETF SCREENER</span>
+          <h3>Find ETFs that fit your questions.</h3>
+          <p>Search the fixed client ETF universe by ticker, fund name, issuer, or category.</p>
+          <span class="teaser-cta">Browse the screener <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="featured-tool-card featured-tool-card-butter" href="tools.html#backtesterTool">
+          <span class="teaser-label">ETF BACKTESTER</span>
+          <h3>See how a starting amount grew.</h3>
+          <p>Compare SCHD, JEPI, VYMI, and VOO over the same monthly period.</p>
+          <span class="teaser-cta">Run a comparison <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+
+        <!-- BEGINNER LEARNING TEASER -->
         <section class="teasers section-pad" id="explore">
           <div class="teasers-head">
-            <div class="section-kicker">FREE TO USE</div>
-            <h2>Explore at your own pace.</h2>
+            <div class="section-kicker">START WITH THE BASICS</div>
+            <h2>Build understanding first.</h2>
           </div>
     
-          <div class="teasers-grid">
-            <a class="teaser-card teaser-dark" href="tools.html">
-              <span class="teaser-label">FREE TOOLS</span>
-              <h3>Run the numbers.</h3>
-              <p>Estimate dividend income, plan toward a monthly goal, and check how sturdy a dividend looks.</p>
-              <ul class="teaser-list">
-                <li>Dividend income estimator</li>
-                <li>Dividend goal planner</li>
-                <li>Dividend safety checklist</li>
-              </ul>
-              <span class="teaser-cta">Open the tools <span aria-hidden="true">→</span></span>
-            </a>
-    
+          <div class="teasers-grid teasers-grid-single">
             <a class="teaser-card teaser-light" href="learn.html">
               <span class="teaser-label">LEARN</span>
               <h3>Learn the language.</h3>
@@ -494,12 +519,11 @@
     <div class="footer-bottom">
       <span>© <span id="currentYear"></span> Armi L. Lavy</span>
       <div>
-        <a href="#about">About</a>
-        <a href="#resources">Resources</a>
         <a href="tools.html">Tools</a>
         <a href="learn.html">Learn</a>
-        <a href="#insights">Insights</a>
         <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosures.html">Disclosures</a>
       </div>
     </div>
   </footer>

@@ -5,7 +5,7 @@
 Add three static, educational ETF tools to the existing website:
 
 1. **Tool #2 — Overlap:** SCHD vs VYMI
-2. **Tool #4 — Screener:** fixed universe of 342 ETFs
+2. **Tool #4 — Screener:** fixed universe of 339 ETFs
 3. **Tool #5 — Backtester:** SCHD, JEPI, and VYMI vs VOO
 
 The tools will use manually maintained local data files and browser-side JavaScript. They will not use live market APIs, user accounts, a database, or a server-side calculation engine.
@@ -35,9 +35,9 @@ Initial output:
 
 The comparison is fixed to SCHD and VYMI for the first release. Adding arbitrary tickers is outside the initial scope.
 
-### Tool #4 — Screener: 342 ETFs
+### Tool #4 — Screener: 339 ETFs
 
-Display a searchable and filterable table using a fixed list of 342 ETFs.
+Display a searchable and filterable table using the client-provided 342-record list, excluding TBT, TMF, and TMV as leveraged/inverse tactical ETFs. The live core universe contains 339 ETFs.
 
 Initial fields:
 
@@ -57,7 +57,7 @@ Initial interactions:
 - Reset filters
 - Responsive table layout
 
-The universe remains fixed at 342 ETFs unless a separate scope change is approved.
+The universe remains fixed at 339 core ETFs unless a separate scope change is approved.
 
 ### Tool #5 — Backtester: dividend ETFs vs VOO
 
@@ -108,7 +108,7 @@ Every dataset must include a visible `dataAsOf` date and a source note where pra
 
 ### Phase 1 — Confirm data and formulas
 
-- Confirm the exact 342-ETF list
+- Confirm the client-provided 342-record list and the three approved exclusions
 - Confirm source and format of holdings data
 - Confirm source and frequency of historical data
 - Confirm overlap formula
@@ -153,7 +153,7 @@ Every dataset must include a visible `dataAsOf` date and a source note where pra
 - No external API is required for normal use
 - The page works from the deployed static site
 - SCHD vs VYMI overlap produces a repeatable result from the included snapshot
-- The screener loads all 342 ETF records and supports the agreed filters
+- The screener loads all 339 core ETF records and supports the agreed filters
 - The backtester compares SCHD, JEPI, VYMI, and VOO using the agreed dataset and assumptions
 - Every tool shows a data-as-of date and educational disclaimer
 - Existing calculator, goal planner, and safety checklist remain functional

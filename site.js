@@ -45,8 +45,8 @@
       if (item && link) {
         link.href = "mailto:" + email;
         const textEl = $("#footerEmailText");
-        if (textEl) textEl.textContent = email;
-        else link.textContent = email;
+        if (textEl) textEl.textContent = "Email us";
+        else link.textContent = "Email us";
         item.hidden = false;
       }
     }
@@ -112,3 +112,39 @@
       });
     }
   })();
+
+// Keep tool-page CTAs aligned to the visible tool heading, not the padded
+// section boundary. The data-driven sections can change height after load,
+// so repeat the correction after the layout settles.
+(() => {
+  "use strict";
+
+  const toolTargets = new Set(["overlapTool", "screenerTool", "backtesterTool"]);
+
+  function alignToolHash() {
+    if (!toolTargets.has(window.location.hash.slice(1))) return;
+
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (!target) return;
+
+    const heading = target.querySelector(".tools-head") || target;
+    const header = document.querySelector(".site-header");
+    const offset = (header?.getBoundingClientRect().height || 0) + 18;
+    const top = window.scrollY + heading.getBoundingClientRect().top - offset;
+
+    window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+  }
+
+  function scheduleAlignment() {
+    requestAnimationFrame(() => {
+      alignToolHash();
+      setTimeout(alignToolHash, 250);
+      setTimeout(alignToolHash, 700);
+      setTimeout(alignToolHash, 1200);
+    });
+  }
+
+  window.addEventListener("hashchange", scheduleAlignment);
+  document.addEventListener("DOMContentLoaded", scheduleAlignment);
+    window.addEventListener("load", scheduleAlignment);
+})();
