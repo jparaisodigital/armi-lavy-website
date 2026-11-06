@@ -52,26 +52,15 @@
     });
   
     $$(".brand-mark").forEach((el) => {
-      el.textContent = config.brand.initials;
+      if (!el.querySelector("img")) {
+        const img = document.createElement("img");
+        img.src = "/assets/logo.png?v=3";
+        img.alt = "";
+        el.appendChild(img);
+      }
     });
-  
+
     $("#currentYear").textContent = new Date().getFullYear();
-  
-    // MOBILE NAVIGATION
-    const menuToggle = $("#menuToggle");
-    const mainNav = $("#mainNav");
-  
-    menuToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("is-open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-  
-    $$("#mainNav a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("is-open");
-        menuToggle.setAttribute("aria-expanded", "false");
-      });
-    });
   
     // HERO SLIDER
     const slides = $$(".hero-slide");
@@ -634,6 +623,44 @@ loadNews();
   });
 })();
 
+// Small glossary preview for the homepage Learn teaser.
+(() => {
+  "use strict";
+
+  const card = document.querySelector(".term-card");
+  if (!card) return;
+
+  const title = card.querySelector("#termCardTitle");
+  const definition = card.querySelector("#termCardDefinition");
+  const count = card.querySelector("#termCardCount");
+  const previous = card.querySelector("#termPrevious");
+  const next = card.querySelector("#termNext");
+  if (!title || !definition || !count || !previous || !next) return;
+
+  const terms = [
+    ["ETF", "A basket of investments that trades like a stock."],
+    ["Dividend", "A payment a company may make to shareholders."],
+    ["Yield", "The income an investment generates relative to its price."],
+    ["Expense ratio", "The annual operating cost charged by a fund."],
+    ["Diversification", "Spreading investments across different holdings or assets."]
+  ];
+  let index = 0;
+
+  function showTerm(nextIndex) {
+    index = (nextIndex + terms.length) % terms.length;
+    card.classList.add("is-changing");
+    window.setTimeout(() => {
+      title.textContent = terms[index][0];
+      definition.textContent = terms[index][1];
+      count.textContent = `${index + 1} / ${terms.length}`;
+      card.classList.remove("is-changing");
+    }, 140);
+  }
+
+  previous.addEventListener("click", () => showTerm(index - 1));
+  next.addEventListener("click", () => showTerm(index + 1));
+})();
+
 /* ===== Footer contact email (shows only if set in config.js) ===== */
 (() => {
   const email = window.SITE_CONFIG && window.SITE_CONFIG.brand && window.SITE_CONFIG.brand.email;
@@ -648,69 +675,3 @@ loadNews();
   item.hidden = false;
 })();
 
-/* ===== FAQ smooth open/close ===== */
-(() => {
-  const items = document.querySelectorAll(".faq-list details");
-  if (!items.length) return;
-
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const DURATION = 350;
-  const EASING = "ease";
-
-  items.forEach((details) => {
-    const summary = details.querySelector("summary");
-    let animation = null;
-
-    const finish = (open) => {
-      details.open = open;
-      details.classList.toggle("is-open", open);
-      details.style.height = "";
-      details.style.overflow = "";
-      animation = null;
-    };
-
-    const animate = (from, to, open) => {
-      if (animation) animation.cancel();
-      details.style.overflow = "hidden";
-      animation = details.animate(
-        { height: [from + "px", to + "px"] },
-        { duration: DURATION, easing: EASING }
-      );
-      animation.onfinish = () => finish(open);
-      animation.oncancel = () => { animation = null; };
-    };
-
-    summary.addEventListener("click", (event) => {
-      event.preventDefault();
-
-      // Walang animation kapag naka-"reduce motion"
-      if (reduceMotion.matches) {
-        details.open = !details.open;
-        details.classList.toggle("is-open", details.open);
-        return;
-      }
-
-      const closedHeight = summary.offsetHeight;
-
-      if (details.open && details.classList.contains("is-open")) {
-        // CLOSE
-        details.classList.remove("is-open");
-        details.style.overflow = "hidden";
-        animate(details.offsetHeight, closedHeight, false);
-      } else {
-        // OPEN
-        const startHeight = details.offsetHeight;
-        details.style.overflow = "hidden";
-        details.open = true;
-        details.classList.add("is-open");
-        const endHeight = summary.offsetHeight +
-          details.querySelector("p").offsetHeight +
-          parseFloat(getComputedStyle(details.querySelector("p")).marginBottom || 0);
-        animate(startHeight, endHeight, true);
-      }
-    });
-
-    // Para sa mga naka-open na sa simula
-    if (details.open) details.classList.add("is-open");
-  });
-})();

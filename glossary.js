@@ -15,6 +15,7 @@
       { key: "dividend-aristocrat", term: "Dividend Aristocrat",
         def: "A company in the S&P 500 that has raised its dividend for at least 25 years in a row. It's an impressive track record, but past increases don't guarantee future ones." },
       { key: "dividend-yield", term: "Dividend yield",
+        article: "what-is-dividend-yield.html",
         def: "The yearly dividend per share divided by the share price, shown as a percentage. A $100 stock paying $4 a year has a 4% yield. Yield rises when the price falls, so a very high yield can be a warning sign rather than a bargain." },
       { key: "drip", term: "DRIP",
         def: "A dividend reinvestment plan automatically uses your dividends to buy more shares instead of paying you cash. Many brokerages offer it, often at no extra cost." },
@@ -29,6 +30,7 @@
       { key: "free-cash-flow", term: "Free cash flow",
         def: "The cash a company has left after paying to run and maintain its business. It's what ultimately funds dividends, which is why many investors watch it as closely as earnings." },
       { key: "payout-ratio", term: "Payout ratio",
+        article: "what-is-dividend-payout-ratio.html",
         def: "The share of a company's earnings paid out as dividends. A $1 dividend on $2 of earnings per share is a 50% payout ratio. A lower ratio usually leaves more room to keep paying in a slow year, though what's normal differs by industry." },
       { key: "qualified-dividend", term: "Qualified dividend",
         def: "In the US, a dividend that may be taxed at lower long-term capital gains rates instead of ordinary income rates, if certain holding-period rules are met. Tax rules change, so check IRS guidance or ask a tax professional." },
@@ -52,7 +54,7 @@
       if (!list) return;
   
       list.innerHTML = GLOSSARY.map(
-        (g) => `<div class="gl-item" id="gl-${g.key}"><dt>${g.term}</dt><dd>${g.def}</dd></div>`
+        (g) => `<div class="gl-item" id="gl-${g.key}"><dt>${g.article ? `<a class="gl-article-link" href="${g.article}">${g.term}</a>` : g.term}</dt><dd>${g.def}</dd></div>`
       ).join("");
   
       function markTarget() {

@@ -31,10 +31,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Styles & Scripts -->
-  <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="theme.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="theme.css?v=6" />
   <script src="config.js?v=2" defer></script>
-  <script src="site.js?v=1" defer></script>
+  <script src="site.js?v=6" defer></script>
   <script src="glossary.js?v=2" defer></script>
   <script src="backtotop.js?v=1" defer></script>
   <script src="reveal.js?v=1" defer></script>
@@ -66,11 +66,11 @@
 <body>
   <header class="site-header">
     <a class="brand" href="/" aria-label="Armi Lavy home">
-      <span class="brand-mark">AL</span>
+      <span class="brand-mark" aria-hidden="true"><img src="/assets/logo.png?v=3" alt="" /></span>
       <span class="brand-name">ARMI L. LAVY</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle"
+    <button type="button" class="menu-toggle" id="menuToggle"
       aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="1.5" width="25" height="25">
@@ -116,7 +116,11 @@
     <section class="closing-cta">
       <div class="section-kicker light-eyebrow">YOUR NEXT CHAPTER</div>
       <h2>Small steps.<br /><em>Greater understanding.</em></h2>
-      <p>Ready to put it into practice? The guide walks you through it, step by step.</p>
+      <p>
+        Ready to put it into practice? Try the
+        <a href="tools.html">free dividend and ETF tools</a>,
+        or use the guide to go deeper step by step.
+      </p>
       <a href="/#resources" class="button button-light">Get the Guide</a>
     </section>
   </main>
@@ -124,8 +128,7 @@
   <footer class="site-footer">
     <div class="footer-top">
       <a class="brand footer-brand" href="/">
-        <span class="brand-mark">AL</span>
-        <span class="brand-name">ARMI L. LAVY</span>
+        <img class="footer-logo" src="assets/footer.png?v=1" alt="Armi L. Lavy" />
       </a>
   
       <div class="footer-connect">
@@ -175,8 +178,7 @@
     </div>
   
     <p class="footer-disclaimer">
-      Educational content only. Not individualized financial, tax, or
-      investment advice. Investing involves risk, including loss of principal.
+      Educational purposes only. Investing involves risk.
     </p>
   
     <div class="footer-bottom">
@@ -190,5 +192,8 @@
       </div>
     </div>
   </footer>
+  <a class="facebook-chat-head" href="https://www.facebook.com/armilavy1986" target="_blank" rel="noopener noreferrer" aria-label="Message Armi L. Lavy on Facebook">
+    <img src="assets/logo.png?v=4" alt="" />
+  </a>
 </body>
 </html>

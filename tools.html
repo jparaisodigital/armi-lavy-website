@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#232625" />
-  <meta name="description" content="Free, beginner-friendly dividend tools: an income estimator, a goal planner, and a simple dividend safety checklist. For education only." />
-  <title>Free Dividend Tools | Armi L. Lavy</title>
+  <meta name="description" content="Free dividend and ETF tools for U.S. investors. Estimate dividend income, compare ETF overlap, screen funds, and explore historical performance." />
+  <title>Free Dividend & ETF Tools | Armi L. Lavy</title>
   <link rel="canonical" href="https://www.armilavyfinance.com/tools" />
 
   <!-- Favicon -->
@@ -16,13 +16,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Armi L. Lavy" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Free Dividend Tools | Armi L. Lavy" />
-  <meta property="og:description" content="Free, beginner-friendly dividend tools: an income estimator, a goal planner, and a simple dividend safety checklist. For education only." />
+  <meta property="og:title" content="Free Dividend & ETF Tools | Armi L. Lavy" />
+  <meta property="og:description" content="Free dividend and ETF tools for U.S. investors. Estimate dividend income, compare ETF overlap, screen funds, and explore historical performance." />
   <meta property="og:url" content="https://www.armilavyfinance.com/tools" />
   <meta property="og:image" content="https://www.armilavyfinance.com/assets/link.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Free Dividend Tools | Armi L. Lavy" />
-  <meta name="twitter:description" content="Free, beginner-friendly dividend tools: an income estimator, a goal planner, and a simple dividend safety checklist. For education only." />
+  <meta name="twitter:title" content="Free Dividend & ETF Tools | Armi L. Lavy" />
+  <meta name="twitter:description" content="Free dividend and ETF tools for U.S. investors. Estimate dividend income, compare ETF overlap, screen funds, and explore historical performance." />
   <meta name="twitter:image" content="https://www.armilavyfinance.com/assets/link.jpg" />
 
   <!-- Fonts -->
@@ -31,10 +31,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Styles & Scripts -->
-  <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="theme.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="theme.css?v=6" />
   <script src="config.js?v=2" defer></script>
-  <script src="site.js?v=1" defer></script>
+  <script src="site.js?v=6" defer></script>
   <script src="calculator.js?v=1" defer></script>
   <script src="tools.js?v=1" defer></script>
   <script src="overlap.js?v=1" defer></script>
@@ -48,11 +48,11 @@
 <body>
   <header class="site-header">
     <a class="brand" href="/" aria-label="Armi Lavy home">
-      <span class="brand-mark">AL</span>
+      <span class="brand-mark" aria-hidden="true"><img src="/assets/logo.png?v=3" alt="" /></span>
       <span class="brand-name">ARMI L. LAVY</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle"
+    <button type="button" class="menu-toggle" id="menuToggle"
       aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="1.5" width="25" height="25">
@@ -75,11 +75,17 @@
     <section class="calculator-section section-pad" id="calculator">
       <div class="calculator-intro">
         <div class="section-kicker">FREE FINANCIAL TOOL</div>
-        <h2>See what your dividends could look like.</h2>
+        <h1>See what your dividends could look like.</h1>
         <p>
           Explore an illustrative dividend-income estimate using your
           investment amount, contribution plan, and assumed
           <button type="button" class="gl-term" data-gl="dividend-yield">annual yield</button>.
+        </p>
+
+        <p>
+          New to dividend terms? Visit the
+          <a href="learn.html">dividend investing glossary</a>
+          for plain-English explanations.
         </p>
         <div class="calculator-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -461,8 +467,7 @@
   <footer class="site-footer">
     <div class="footer-top">
       <a class="brand footer-brand" href="/">
-        <span class="brand-mark">AL</span>
-        <span class="brand-name">ARMI L. LAVY</span>
+        <img class="footer-logo" src="assets/footer.png?v=1" alt="Armi L. Lavy" />
       </a>
   
       <div class="footer-connect">
@@ -512,8 +517,7 @@
     </div>
   
     <p class="footer-disclaimer">
-      Educational content only. Not individualized financial, tax, or
-      investment advice. Investing involves risk, including loss of principal.
+      Educational purposes only. Investing involves risk.
     </p>
   
     <div class="footer-bottom">
@@ -527,5 +531,8 @@
       </div>
     </div>
   </footer>
+  <a class="facebook-chat-head" href="https://www.facebook.com/armilavy1986" target="_blank" rel="noopener noreferrer" aria-label="Message Armi L. Lavy on Facebook">
+    <img src="assets/logo.png?v=4" alt="" />
+  </a>
 </body>
 </html>

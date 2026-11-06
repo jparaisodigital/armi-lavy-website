@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#232625" />
-  <meta name="description" content="Build a more confident financial future with Armi L. Lavy. Explore beginner-friendly investing education, financial tools, and market insights." />
-  <title>Armi L. Lavy | Personal Finance & Investing</title>
+  <meta name="description" content="Learn dividend investing with beginner-friendly education, free financial tools, and practical resources from Armi L. Lavy." />
+  <title>Dividend Investing for Beginners | Armi L. Lavy</title>
   <link rel="canonical" href="https://www.armilavyfinance.com/" />
 
   <!-- Favicon -->
@@ -16,8 +16,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Armi L. Lavy" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Armi L. Lavy | Personal Finance & Investing" />
-  <meta property="og:description" content="Build a more confident financial future with Armi L. Lavy. Explore beginner-friendly investing education, financial tools, and market insights." />
+  <meta property="og:title" content="Dividend Investing for Beginners | Armi L. Lavy" />
+  <meta property="og:description" content="Learn dividend investing with beginner-friendly education, free financial tools, and practical resources from Armi L. Lavy." />
   <meta property="og:url" content="https://www.armilavyfinance.com/" />
   <meta property="og:image" content="https://www.armilavyfinance.com/assets/link.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -27,8 +27,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Armi L. Lavy | Personal Finance & Investing" />
-  <meta name="twitter:description" content="Beginner-friendly investing education, financial tools, and market insights." />
+  <meta name="twitter:title" content="Dividend Investing for Beginners | Armi L. Lavy" />
+  <meta name="twitter:description" content="Learn dividend investing with beginner-friendly education, free financial tools, and practical resources from Armi L. Lavy." />
   <meta name="twitter:image" content="https://www.armilavyfinance.com/assets/link.jpg" />
 
   <!-- Fonts -->
@@ -37,10 +37,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Styles & Scripts -->
-  <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="theme.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="theme.css?v=6" />
+  <script src="site.js?v=6" defer></script>
   <script src="config.js?v=2" defer></script>
-  <script src="app.js?v=2" defer></script>
+  <script src="app.js?v=3" defer></script>
   <script src="reveal.js?v=1" defer></script>
   <script src="backtotop.js?v=1" defer></script>
 
@@ -90,11 +91,11 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Armi Lavy home">
-      <span class="brand-mark">AL</span>
+      <span class="brand-mark" aria-hidden="true"><img src="/assets/logo.png?v=3" alt="" /></span>
       <span class="brand-name">ARMI L. LAVY</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle"
+    <button type="button" class="menu-toggle" id="menuToggle"
       aria-label="Toggle navigation" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="1.5" width="25" height="25">
@@ -131,11 +132,11 @@
           PERSONAL FINANCE · INVESTING EDUCATION
         </span>
 
-        <h1>A more confident relationship with money.</h1>
+        <h1>Dividend investing, made clearer.</h1>
 
         <p>
-          Practical financial education for beginners ready to understand
-          investing, make informed decisions, and build lasting habits.
+          Beginner-friendly financial education to help you understand
+          dividend investing, make informed decisions, and build lasting habits.
         </p>
 
         <div class="hero-actions">
@@ -223,7 +224,7 @@
           </svg>
         </div>
         <h3>Understand the basics</h3>
-        <p>Learn essential financial concepts in clear, approachable language.</p>
+        <p>Learn how ETFs, dividends, risk, and investing terms work in plain English.</p>
       </article>
 
       <article class="principle">
@@ -235,7 +236,7 @@
           </svg>
         </div>
         <h3>Build steady habits</h3>
-        <p>Use simple frameworks to approach your financial goals consistently.</p>
+        <p>Create simple routines for saving, researching investments, and tracking your progress.</p>
       </article>
 
       <article class="principle">
@@ -248,7 +249,7 @@
           </svg>
         </div>
         <h3>Make informed choices</h3>
-        <p>Understand risk, evaluate investments, and decide at your own pace.</p>
+        <p>Compare opportunities, understand the risks, and make decisions at your own pace.</p>
       </article>
     </section>
 
@@ -318,7 +319,7 @@
             <h2>Build understanding first.</h2>
           </div>
     
-          <div class="teasers-grid teasers-grid-single">
+          <div class="teasers-grid teasers-grid-learn">
             <a class="teaser-card teaser-light" href="learn.html">
               <span class="teaser-label">LEARN</span>
               <h3>Learn the language.</h3>
@@ -329,6 +330,22 @@
               </ul>
               <span class="teaser-cta">Start learning <span aria-hidden="true">→</span></span>
             </a>
+
+            <aside class="term-card" aria-labelledby="termCardTitle">
+              <div class="teaser-label">QUICK DEFINITION</div>
+              <div class="term-card-heading">
+                <h3 id="termCardTitle">ETF</h3>
+                <span class="term-card-count" id="termCardCount" aria-live="polite">1 / 5</span>
+              </div>
+              <p id="termCardDefinition" aria-live="polite">
+                A basket of investments that trades like a stock.
+              </p>
+              <div class="term-card-controls">
+                <button type="button" class="term-card-button" id="termPrevious" aria-label="Previous definition">←</button>
+                <button type="button" class="term-card-button" id="termNext" aria-label="Next definition">→</button>
+              </div>
+              <a class="term-card-link" href="learn.html#glossary">View the glossary <span aria-hidden="true">→</span></a>
+            </aside>
           </div>
         </section>
 
@@ -391,6 +408,80 @@
           target="_blank" rel="noopener noreferrer">Browse financial news</a>
       </div>
 
+      <article class="insight-feature-card">
+        <div class="insight-feature-meta">
+          <span>DIVIDEND INVESTING BASICS</span>
+          <span>6 MIN READ</span>
+        </div>
+
+        <div class="insight-feature-content">
+          <div>
+            <h3><a href="what-is-dividend-yield.html">What Is Dividend Yield?</a></h3>
+            <p>
+              A beginner-friendly explanation of how dividend yield works,
+              how it is calculated, and why a higher yield is not always better.
+            </p>
+          </div>
+
+          <a
+            class="text-link dark-link"
+            href="what-is-dividend-yield.html"
+          >
+            Read the article
+          </a>
+        </div>
+      </article>
+      <article class="insight-feature-card">
+        <div class="insight-feature-meta">
+          <span>DIVIDEND INVESTING BASICS</span>
+          <span>6 MIN READ</span>
+        </div>
+
+        <div class="insight-feature-content">
+          <div>
+            <h3>
+              <a href="what-is-dividend-payout-ratio.html">
+                What Is a Dividend Payout Ratio?
+              </a>
+            </h3>
+
+            <p>
+              Learn how payout ratio works, how it is calculated,
+              and what it can reveal about dividend sustainability.
+            </p>
+          </div>
+
+          <a
+            class="text-link dark-link"
+            href="what-is-dividend-payout-ratio.html"
+          >
+            Read the article
+          </a>
+        </div>
+      </article>
+      <article class="insight-support-card">
+        <div>
+          <span class="insight-support-label">COMPARE THE METRICS</span>
+
+          <h3>
+            <a href="dividend-yield-vs-payout-ratio.html">
+              Dividend Yield vs. Payout Ratio
+            </a>
+          </h3>
+
+          <p>
+            See what each metric measures, how they differ,
+            and why reviewing both can provide more context.
+          </p>
+        </div>
+
+        <a
+          class="text-link dark-link"
+          href="dividend-yield-vs-payout-ratio.html"
+        >
+          Read the comparison
+        </a>
+      </article>
       <div class="news-status" id="newsStatus" aria-live="polite">
         Loading recent financial headlines...
       </div>
@@ -461,8 +552,7 @@
   <footer class="site-footer">
     <div class="footer-top">
       <a class="brand footer-brand" href="#home">
-        <span class="brand-mark">AL</span>
-        <span class="brand-name">ARMI L. LAVY</span>
+        <img class="footer-logo" src="assets/footer.png?v=1" alt="Armi L. Lavy" />
       </a>
   
       <div class="footer-connect">
@@ -512,8 +602,7 @@
     </div>
   
     <p class="footer-disclaimer">
-      Educational content only. Not individualized financial, tax, or
-      investment advice. Investing involves risk, including loss of principal.
+      Educational purposes only. Investing involves risk.
     </p>
   
     <div class="footer-bottom">
@@ -527,5 +616,8 @@
       </div>
     </div>
   </footer>
+  <a class="facebook-chat-head" href="https://www.facebook.com/armilavy1986" target="_blank" rel="noopener noreferrer" aria-label="Message Armi L. Lavy on Facebook">
+    <img src="assets/logo.png?v=4" alt="" />
+  </a>
 </body>
 </html>

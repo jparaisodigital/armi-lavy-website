@@ -105,8 +105,9 @@ section[id] {
   justify-content: space-between;
   gap: 32px;
   background: var(--paper);
-  position: relative;
-  z-index: 20;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   border-bottom: 1px solid var(--line);
 }
 
@@ -122,16 +123,32 @@ section[id] {
   place-items: center;
   width: 39px;
   height: 39px;
-  border: 1px solid var(--gold);
-  color: var(--green);
-  font-family: var(--serif);
-  font-size: 16px;
+  flex: 0 0 39px;
+  overflow: hidden;
+  border: 0;
+}
+
+.brand-mark img {
+  display: block;
+  width: 39px;
+  height: 39px;
+  max-width: none;
+  object-fit: contain;
+  visibility: visible;
+  opacity: 1;
 }
 
 .brand-name {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.17em;
+}
+
+.footer-logo {
+  display: block;
+  width: min(220px, 100%);
+  height: auto;
+  object-fit: contain;
 }
 
 .main-nav {
@@ -2042,4 +2059,70 @@ section[id] {
 .footer-links a.contact-link:focus-visible {
   border-bottom-color: transparent;
   color: var(--green);
+}
+
+/* Mobile navigation reliability */
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1002;
+    pointer-events: auto;
+  }
+
+  .main-nav {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 24px var(--page-pad);
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    clip-path: inset(0 0 100% 0);
+    transition: opacity .2s ease, transform .2s ease, clip-path .2s ease, visibility 0s linear .2s;
+  }
+
+  .main-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    clip-path: inset(0);
+    transition-delay: 0s;
+  }
+
+  .main-nav > a {
+    padding: 14px 0;
+  }
+
+  .main-nav .nav-cta {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Desktop sticky Editor's Selection column */
+@media (min-width: 901px) {
+  .journal-feature-column {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+  }
 }
