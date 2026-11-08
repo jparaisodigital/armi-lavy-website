@@ -13,7 +13,7 @@
       $$(".brand-mark").forEach((el) => {
         if (!el.querySelector("img")) {
           const img = document.createElement("img");
-          img.src = "/assets/logo.png?v=3";
+          img.src = "/assets/armi.jpg?v=3";
           img.alt = "";
           el.appendChild(img);
         }
