@@ -16,6 +16,9 @@
       [".intro h2", "mask"],
       [".intro-copy", "right"],
       [".principle", "up"],
+
+      [".about-story-photo", "left"],
+      [".about-story-copy", "right"],
   
       [".section-heading .section-kicker", "up"],
       [".section-heading h2", "mask"],

@@ -38,11 +38,11 @@
 
   <!-- Styles & Scripts -->
   <link rel="stylesheet" href="style.css?v=3" />
-  <link rel="stylesheet" href="theme.css?v=7" />
-  <script src="site.js?v=6" defer></script>
+  <link rel="stylesheet" href="theme.css?v=9" />
+  <script src="site.js?v=7" defer></script>
   <script src="config.js?v=2" defer></script>
   <script src="app.js?v=3" defer></script>
-  <script src="reveal.js?v=1" defer></script>
+  <script src="reveal.js?v=2" defer></script>
   <script src="backtotop.js?v=1" defer></script>
 
   <script type="application/ld+json">
@@ -210,6 +210,32 @@
           <a href="#resources" class="text-link dark-link">
             Discover the learning resources
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ARMI -->
+    <section class="about-story section-pad" aria-labelledby="aboutStoryHeading">
+      <div class="about-story-grid">
+        <figure class="about-story-photo">
+          <img src="assets/about.jpg" alt="Armi L. Lavy" loading="lazy" />
+        </figure>
+        <div class="about-story-copy">
+          <div class="section-kicker">ABOUT ARMI</div>
+          <h2 id="aboutStoryHeading">Hi, I'm Armi.</h2>
+          <p>
+            I started learning about personal finance and dividend investing because I wanted to understand my money better, not feel confused by it.
+          </p>
+          <p>
+            Most of what I found online was too complicated, too fast, or full of jargon. So I started breaking it down in simple words, first for myself, and then for others who felt the same way.
+          </p>
+          <p>
+            Now I share what I learn through this website, my free tools, and my resource library. My goal is simple: help beginners understand the basics, build steady habits, and make informed choices at their own pace.
+          </p>
+          <p>
+            I am not a financial advisor, and this site is not financial advice. It is a place to learn, ask questions, and take small steps with more confidence.
+          </p>
+          <p>Thank you for being here and learning with me.</p>
         </div>
       </div>
     </section>
@@ -549,7 +575,84 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  
+<section class="contact-section section-pad" id="contact">
+  <div class="contact-inner">
+    <div class="contact-copy">
+      <p class="section-kicker">GET IN TOUCH</p>
+      <h2>Have a question?</h2>
+      <p>
+        Send a message and we'll get back to you as soon as possible.
+      </p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <input
+        type="hidden"
+        name="access_key"
+        value="27f399e8-42d3-4844-a5e7-2d04330778d6"
+      >
+
+      <input
+        type="hidden"
+        name="subject"
+        value="New message from Armi L. Lavy website"
+      >
+
+      <input
+        type="checkbox"
+        name="botcheck"
+        class="contact-botcheck"
+        tabindex="-1"
+        autocomplete="off"
+      >
+
+      <div class="contact-field">
+        <label for="contactName">Name</label>
+        <input
+          id="contactName"
+          name="name"
+          type="text"
+          autocomplete="name"
+          required
+        >
+      </div>
+
+      <div class="contact-field">
+        <label for="contactEmail">Email</label>
+        <input
+          id="contactEmail"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="contact-field">
+        <label for="contactMessage">Message</label>
+        <textarea
+          id="contactMessage"
+          name="message"
+          rows="6"
+          required
+        ></textarea>
+      </div>
+
+      <button class="contact-submit" type="submit">
+        Send message
+      </button>
+
+      <p
+        class="contact-status"
+        id="contactStatus"
+        role="status"
+        aria-live="polite"
+      ></p>
+    </form>
+  </div>
+</section>
+<footer class="site-footer">
     <div class="footer-top">
       <a class="brand footer-brand" href="#home">
         <img class="footer-logo" src="assets/footer.png?v=1" alt="Armi L. Lavy" />
@@ -619,5 +722,35 @@
   <a class="facebook-chat-head" href="https://www.facebook.com/armilavy1986" target="_blank" rel="noopener noreferrer" aria-label="Message Armi L. Lavy on Facebook">
     <img src="assets/logo.png?v=4" alt="" />
   </a>
+
+<div class="contact-modal" id="contactModal" aria-hidden="true">
+  <div class="contact-modal-backdrop" data-contact-close></div>
+
+  <div
+    class="contact-modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contactModalTitle"
+  >
+    <button
+      class="contact-modal-close"
+      type="button"
+      aria-label="Close"
+      data-contact-close
+    >
+      ×
+    </button>
+
+    <p class="section-kicker">MESSAGE SENT</p>
+
+    <h3 id="contactModalTitle">
+      Thank you.
+    </h3>
+
+    <p>
+      Your message has been sent. We'll get back to you as soon as possible.
+    </p>
+  </div>
+</div>
 </body>
 </html>

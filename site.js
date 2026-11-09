@@ -439,3 +439,129 @@
 
   updateChatHeadPosition();
 })();
+
+/* Web3Forms contact form */
+const contactForm = document.getElementById("contactForm");
+const contactStatus = document.getElementById("contactStatus");
+
+if (contactForm && contactStatus) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    const formData = new FormData(contactForm);
+    const payload = Object.fromEntries(formData.entries());
+
+    contactStatus.classList.remove("is-error");
+    contactStatus.textContent = "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.dataset.originalText = submitButton.textContent;
+      submitButton.textContent = "Sending...";
+    }
+
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify(payload)
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "Unable to send message."
+        );
+      }
+
+      contactStatus.textContent = "";
+      contactForm.reset();
+      openContactModal();
+    }
+    catch (error) {
+      console.error("Contact form error:", error);
+
+      contactStatus.classList.add("is-error");
+      contactStatus.textContent =
+        "Something went wrong. Please try again.";
+    }
+    finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent =
+          submitButton.dataset.originalText || "Send message";
+      }
+    }
+  });
+}
+
+/* Contact success modal controls */
+const contactModal = document.getElementById("contactModal");
+let contactModalPreviousFocus = null;
+
+function openContactModal() {
+  if (!contactModal) return;
+
+  contactModalPreviousFocus = document.activeElement;
+
+  contactModal.classList.add("is-open");
+  contactModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  const closeButton = contactModal.querySelector(
+    ".contact-modal-close"
+  );
+
+  closeButton?.focus();
+}
+
+function closeContactModal() {
+  if (!contactModal) return;
+
+  const activeElement = document.activeElement;
+
+  if (
+    activeElement &&
+    contactModal.contains(activeElement) &&
+    typeof activeElement.blur === "function"
+  ) {
+    activeElement.blur();
+  }
+
+  contactModal.classList.remove("is-open");
+  contactModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+
+  if (
+    contactModalPreviousFocus &&
+    typeof contactModalPreviousFocus.focus === "function"
+  ) {
+    contactModalPreviousFocus.focus();
+  }
+}
+
+document.querySelectorAll("[data-contact-close]").forEach(
+  (element) => {
+    element.addEventListener("click", closeContactModal);
+  }
+);
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    contactModal?.classList.contains("is-open")
+  ) {
+    closeContactModal();
+  }
+});
