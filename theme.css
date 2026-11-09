@@ -2287,3 +2287,21 @@ body.modal-open {
 .contact-modal-close:hover {
   background: rgba(111, 133, 111, .10);
 }
+
+/* Contact inquiry dropdown */
+.contact-field select {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(25, 29, 26, .35);
+  border-radius: 0;
+  background: transparent;
+  padding: 11px 0;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.contact-field select:focus {
+  border-bottom-color: #667b62;
+}
